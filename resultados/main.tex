@@ -5,7 +5,7 @@ La salida de la herramienta sigue el formato indicado en el prompt \ref{fig:prom
 
 Las historias generadas se presentan en la tabla \ref{tab:historias_clickup}, junto a sus criterios de aceptación en la tabla \ref{tab:criterios_clickup}, las referencias al documento de requisitos en la tabla \ref{tab:referencias_clickup} e indicación de si es una épica en la tabla \ref{tab:epicas_clickup}.
 
-Las inconsistencias, ambiguedades o contradicciones detectadas en el documento se presentan en la tabla \ref{tab:inconsistencias_clickup}.
+Las inconsistencias, ambigüedades o contradicciones detectadas en el documento se presentan en la tabla \ref{tab:inconsistencias_clickup}.
 
 \begin{longtable}{|c|p{12cm}|}
 \caption{Historias Generadas por ClickUp} \label{tab:historias_clickup} \\
@@ -368,7 +368,7 @@ A3 & Sí \\
 
 \subsection{Discusión sobre resultado obtenido de detección de inconsistencias}
 
-Las tres ambigüedades detectadas por la herramienta son correctas. La ambigüedad A1 detecto indirectamente la inconsistencia en la sección 4.3, donde el documento afirma que los usuarios pueden editar la historia clínica electrónica y que los pacientes no pueden modificarla. Las historias generadas para este requerimiento no presentan una contradicción, ya que HU10 asigna la edición de la historia clínica al médico y HU11 le otorga al paciente únicamente la consulta.
+Las tres ambigüedades detectadas por la herramienta son correctas. La ambigüedad A1 detectó indirectamente la inconsistencia en la sección 4.3, donde el documento afirma que los usuarios pueden editar la historia clínica electrónica y que los pacientes no pueden modificarla. Las historias generadas para este requerimiento no presentan una contradicción, ya que HU10 asigna la edición de la historia clínica al médico y HU11 le otorga al paciente únicamente la consulta.
 
 \section{Detección de alucinaciones}
 
@@ -421,16 +421,16 @@ HU23 & No & Si & No & Si \\
 \end{longtable}
 
 
-El * indica que la historia HU4 introduce un rol nuevo Authorized User que abarca tanto el actor Administrative staff member y Doctor, que si bien es correcto no esta presente en el documento de requisitos.
+El * indica que la historia HU4 introduce un rol nuevo Authorized User que abarca tanto el actor Administrative staff member y Doctor, que si bien es correcto no está presente en el documento de requisitos.
 
-De manera similar, el * indica que las historias HU12, HU13, HU14 introducen un rol nuevo Administrador, que no esta definido en el documento de requisitos. En este caso, la IA tuvo que inferir tomando uno de los caminos posibles, que es crear un rol nuevo para asignarle estas funcionalidades (otro camino podría haber sido asignarselas al administrative staff member).
+De manera similar, el * indica que las historias HU12, HU13, HU14 introducen un rol nuevo Administrador, que no está definido en el documento de requisitos. En este caso, la IA tuvo que inferir tomando uno de los caminos posibles, que es crear un rol nuevo para asignarle estas funcionalidades (otro camino podría haber sido asignarselas al administrative staff member).
 
-Las historias HU22 y HU23 son consideradas como alucinaciones, ya que no son coherente la presencia de un administrador de sistema que valide funcionalidades automatizadas por el sistema, es mas una restricción del sistema.
+Las historias HU22 y HU23 son consideradas como alucinaciones, ya que no es coherente la presencia de un administrador de sistema que valide funcionalidades automatizadas por el sistema, es más una restricción del sistema.
 
 \[\# Historias_{Alucinaciones} = 2 \]
 
 \subsection{Discusión sobre resultado obtenido en la detección de alucinaciones}
-No podemos afirmar que la solución generada esta libre de alucinaciones. Se encontraron 2 historias de usuario clasificadas como alucinaciones, lo que representa un 8,7\% del total. En ambos casos, las historias expresan funcionalidades automatizadas por el sistema asignadas a un actor incoherente, aunque los requerimientos sí están presentes en el documento de requisitos y su contenido se mantiene dentro del dominio definido. Un analista podría corregirlas fácilmente reemplazando el actor específico por el sistema como sujeto. De no realizarse esta corrección, podrían derivar en decisiones de implementación incorrectas, como la construcción de un rol de usuario que nunca llegaría a utilizarse.
+No podemos afirmar que la solución generada está libre de alucinaciones. Se encontraron 2 historias de usuario clasificadas como alucinaciones, lo que representa un 8,7\% del total. En ambos casos, las historias expresan funcionalidades automatizadas por el sistema asignadas a un actor incoherente, aunque los requerimientos sí están presentes en el documento de requisitos y su contenido se mantiene dentro del dominio definido. Un analista podría corregirlas fácilmente reemplazando el actor específico por el sistema como sujeto. De no realizarse esta corrección, podrían derivar en decisiones de implementación incorrectas, como la construcción de un rol de usuario que nunca llegaría a utilizarse.
 
 \section{Quality User Story Framework}
 
@@ -608,9 +608,9 @@ HU23 & - & - & - & -  \\ \hline
 
 El * en el aspecto Estimable para HU7 indica que podría ser estimable si se considera editar y cancelar citas como acciones similares.
 
-El * en el aspecto Única de HU4 indica que la historia podría no se única si HU3 incluyera la visualización de los datos del usuario
+El * en el aspecto Única de HU4 indica que la historia podría no ser única si HU3 incluyera la visualización de los datos del usuario.
 
-Para el aspecto Independiente, en QUSF se define la dependencia de Causality, es decir que una historia necesita ser completada primero que otra. Se marca como No para el caso de Causality, indicando las historias con la independencia.
+Para el aspecto Independiente, en QUSF se define la dependencia de Causality, es decir que una historia necesita ser completada primero que otra. Se marca como No para el caso de Causality, indicando las historias de las que depende.
 
 La tabla \ref{table:prag2} finaliza la evaluación del conjunto de historias de usuario, indicando si es completo y uniforme.
 
@@ -622,7 +622,7 @@ La tabla \ref{table:prag2} finaliza la evaluación del conjunto de historias de 
 \textbf{Complete} \newline Completo & \textbf{Uniform} \newline Uniforme  \\ \hline
 Si* & Si \\\hline
 \end{tabular}
-\caption{Evaluación de completitud del conjunto de historias según QUS}
+\caption{Evaluación de completitud del conjunto de historias según QUSF}
 \label{table:prag2}
 \end{table}
 
@@ -819,7 +819,7 @@ R23 & Sí \\
 Las referencias a las secciones del documento son correctas, lo que indica que la herramienta logra mantener la trazabilidad con el documento de entrada.
 
 \section{Similitud Semántica}
-El proceso de evaluación compara un conjunto de 23 historias de usuario generadas automáticamente mediante un modelo de lenguaje contra un conjunto de 57 historias de usuario esperadas, elaboradas manualmente por analistas humanos. Adicionalmente se generó automáticamente un conjunto de funcionalidades del dominio a partir del documento de requisitos del producto (PDR) que posteriormente fué refinado, siendo el conjunto final una cantidad de 54 funcionalidades que permiten evaluar la cobertura funcional de ambas soluciones.
+El proceso de evaluación compara un conjunto de 23 historias de usuario generadas automáticamente mediante un modelo de lenguaje contra un conjunto de 57 historias de usuario esperadas, elaboradas manualmente por analistas humanos. Adicionalmente se generó automáticamente un conjunto de funcionalidades del dominio a partir del documento de requisitos del producto (PDR) que posteriormente fue refinado, siendo el conjunto final de 54 funcionalidades que permiten evaluar la cobertura funcional de ambas soluciones.
 El análisis se estructura en tres dimensiones principales:
 \begin{itemize}
     \item Alineación semántica entre historias generadas y esperadas 
@@ -881,7 +881,7 @@ La tabla \ref{tab:low_similarity_example} muestra un ejemplo de esto para la his
 \end{table}
 
 Esta historia presenta una similitud significativamente baja con sus mejores coincidencias (0.3132), las cuales además pertenecen a funcionalidades no relacionadas con el dominio de la historia generada. Esto evidencia una limitación del LLM a la hora de generar este tipo de requisitos, representando al menos en este caso un requisito no funcional como una historia de usuario.
-En conjunto estos resultados evidencian limitaciones del enfoque basado (al menor de manera explusiva) en similitud semántica, ya que puede producir alineaciones incorrectas desde el punto de vista funcional y no capturar de manera adecuada las diferencias en granularidad o tipo de requisito.
+En conjunto estos resultados evidencian limitaciones del enfoque basado (al menos de manera exclusiva) en similitud semántica, ya que puede producir alineaciones incorrectas desde el punto de vista funcional y no capturar de manera adecuada las diferencias en granularidad o tipo de requisito.
 Esto refuerza la necesidad de complementar la evaluación automática con un análisis manual que permita validar la correspondencia funcional real entre historias, aunque  el enfoque propuesto facilita significativamente este proceso, para el caso de la alineación semántica la presentación de las mejores coincidencias (top-3) permite al analista identificar rápidamente las relaciones más relevantes y detectar posibles inconsistencias, como alineaciones incorrectas o casos de baja similitud. La evaluación automática entonces no reemplaza la revisión manual, sino que actúa como una herramienta de apoyo que mejora la eficiencia. 
 Los resultados de alineación si bien son relevantes y evidencian parte de la calidad de la generación, no resultan suficientes para asegurar la correctitud del contenido generado, es necesario analizar adicionalmente otras dimensiones, como la cobertura del dominio o la detección de alucinaciones.
 
@@ -906,7 +906,7 @@ No cubierta & 12 (22.2\%) & 13 (24.1\%) \\
 \label{tab:cobertura_funcional}
 \end{table}
 
-El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en el Capitulo \ref{cap:anexo}, Anexo 4.
+El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en el Capítulo \ref{cap:anexo}, Anexo 4.
 
 Los resultados muestran que ambos conjuntos presentan una distribución de cobertura altamente similar. En ambos casos, aproximadamente la mitad de las funcionalidades se encuentran parcialmente cubiertas, mientras que alrededor de un tercio presenta cobertura completa.
 Las funcionalidades completamente cubiertas se corresponden principalmente con acciones explícitas, tales como el registro, consulta y modificación de información. En estos casos se observan valores de similitud elevados y correspondencias directas entre funcionalidades e historias.
@@ -917,7 +917,7 @@ Las funcionalidades no cubiertas se observan en aspectos relacionados con las re
 
 \subsubsection{Comparación entre conjuntos}
 La comparación entre ambos conjuntos evidencia que las historias generadas alcanzan un nivel de cobertura funcional comparable al de las historias esperadas. Las diferencias observadas son mínimas, con una leve mejora en la proporción de funcionalidades completamente cubiertas y una reducción en la cantidad de funcionalidades no cubiertas por parte del conjunto generado.
-Ambos conjuntos comparten un mismo compartamiento, una alta representación de funcionalidades explícitas y una baja cobertura de aspectos implícitos, que se pueden también ver como requisitos no funcionales, particularmente funcionalidades relacionadas con identificadores únicos, control de acceso y reglas de consistencia del sistema no son capturadas de manera directa por ninguno de los dos conjuntos. Se puede concluir que el modelo no introduce mejoras significativas en la cobertura del dominio, sino que produce un tipo de representación similar a la que realizan los analistas humanos, pero tampoco empeora el nivel de cobertura, en ciertos casos dividiendo una funcionalidad en mas de una historia pero de todos modos incluyendo la esencia de la misma.
+Ambos conjuntos comparten un mismo comportamiento, una alta representación de funcionalidades explícitas y una baja cobertura de aspectos implícitos, que se pueden también ver como requisitos no funcionales, particularmente funcionalidades relacionadas con identificadores únicos, control de acceso y reglas de consistencia del sistema no son capturadas de manera directa por ninguno de los dos conjuntos. Se puede concluir que el modelo no introduce mejoras significativas en la cobertura del dominio, sino que produce un tipo de representación similar a la que realizan los analistas humanos, pero tampoco empeora el nivel de cobertura, en ciertos casos dividiendo una funcionalidad en más de una historia pero de todos modos incluyendo la esencia de la misma.
 \subsubsection{Conclusiones}
 Los resultados indican que el modelo es capaz de generar historias de usuario que alcanzan un nivel de cobertura funcional equivalente al de un conjunto elaborado manualmente por analistas human
 
@@ -955,14 +955,14 @@ En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de a
     \includegraphics[width=\linewidth]{resultados/grafo/completo.png}
 \end{wrapfigure}
 
-Se construyó el gráfico para nuestra solución, con el fin de interpretar de manera gráfica los resultados obtenidos. El grafo completo esta reportado en el Anexo (ref), pero ya que la visualización completa del mismo implica reducir mucho el tamaño de imagen, se analizan subgrafos representativos, que son partes del grafo completo resultado de la aplicación de la metodología.
+Se construyó el gráfico para nuestra solución, con el fin de interpretar de manera gráfica los resultados obtenidos. El grafo completo está reportado en el Anexo (ref), pero ya que la visualización completa del mismo implica reducir mucho el tamaño de imagen, se analizan subgrafos representativos, que son partes del grafo completo resultado de la aplicación de la metodología.
 
 
 \subsubsection{Caso 1: Alineación semántica fuerte}
 \begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
     \centering
     \includegraphics[width=0.38\textwidth]{resultados/grafo/pacientes.png}
-    \caption{Similitud semántica respectivas a funcionalidades/historias respectivas a Pacientes}
+    \caption{Similitud semántica relativas a funcionalidades/historias correspondientes a Pacientes}
 \end{wrapfigure}
 
 Este
