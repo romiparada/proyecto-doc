@@ -18,7 +18,8 @@ jobs:
         env:
           OVERLEAF_PASSWORD: ${{ secrets.OVERLEAF_PASSWORD }}
         run: |
-          git fetch https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42 master:refs/remotes/overleaf/master
+          git remote add overleaf https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42
+          git fetch overleaf master
 
           BEHIND=$(git rev-list HEAD..overleaf/master --count)
 
@@ -27,4 +28,4 @@ jobs:
             exit 1
           fi
 
-          echo "Todo sincronizado, se puede mergear."
+          echo "Parece que se puede mergear."
