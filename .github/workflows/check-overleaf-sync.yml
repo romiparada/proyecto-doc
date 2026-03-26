@@ -20,8 +20,9 @@ jobs:
         run: |
           git remote add overleaf https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42
           git fetch overleaf master
+          git fetch origin overleaf
 
-          BEHIND=$(git rev-list HEAD..overleaf/master --count)
+          BEHIND=$(git rev-list origin/overleaf..overleaf/master --count)
 
           if [ "$BEHIND" -gt 0 ]; then
             echo "No se puede! Hay cambios en Overleaf que hay que traerse"
