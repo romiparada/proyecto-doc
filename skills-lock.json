@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "latex-paper-en": {
+      "source": "bahayonghang/academic-writing-skills",
+      "sourceType": "github",
+      "computedHash": "b5f02c771db97e8a96dedd05bd4a3d57c4ccd97a3d47434ef7a3cadd28097d05"
+    },
+    "latex-thesis-zh": {
+      "source": "bahayonghang/academic-writing-skills",
+      "sourceType": "github",
+      "computedHash": "02fc258e5739839314558c358e883bd2cde73b7269c4e09d72c570505d45f9f0"
+    }
+  }
+}
