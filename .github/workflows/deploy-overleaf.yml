@@ -17,6 +17,4 @@ jobs:
       - name: Push to Overleaf
         env:
           OVERLEAF_PASSWORD: ${{ secrets.OVERLEAF_PASSWORD }}
-        run: |
-          git remote set-url overleaf https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42
-          git push overleaf HEAD:master
+        run: git push https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42 HEAD:master
