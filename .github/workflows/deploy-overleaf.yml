@@ -1,0 +1,20 @@
+name: Deploy to Overleaf
+
+on:
+  push:
+    branches:
+      - overleaf
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Overleaf
+        env:
+          OVERLEAF_PASSWORD: ${{ secrets.OVERLEAF_PASSWORD }}
+        run: git push https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42 HEAD:master
