@@ -1,0 +1,30 @@
+name: Check Overleaf Sync
+
+on:
+  pull_request:
+    branches:
+      - overleaf
+
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if Overleaf is ahead
+        env:
+          OVERLEAF_PASSWORD: ${{ secrets.OVERLEAF_PASSWORD }}
+        run: |
+          git fetch https://git:${OVERLEAF_PASSWORD}@git.overleaf.com/68c075c10ebc8872716b6f42 master:refs/remotes/overleaf/master
+
+          BEHIND=$(git rev-list HEAD..overleaf/master --count)
+
+          if [ "$BEHIND" -gt 0 ]; then
+            echo "No se puede! Hay cambios en Overleaf que hay que traerse"
+            exit 1
+          fi
+
+          echo "Todo sincronizado, se puede mergear."
