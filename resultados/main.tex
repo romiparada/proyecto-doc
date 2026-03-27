@@ -829,7 +829,24 @@ El análisis se estructura en tres dimensiones principales:
 \end{itemize}
 
 \subsection{Análisis de alineación semántica}
-Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. Esto se refleja en el valor promedio de similitud obtenido (0.7714), lo que sugiere que en general las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado. 
+La alineación semántica entre historias generadas e historias esperadas se muestra en la tabla \ref{tab:alignment_histories}.
+Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0.7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Similitud Semántica} & \textbf{Numero de Historias Generadas} & \textbf{Porcentaje} \\
+\hline
+Similar (> 0.8)   & 13  & 57\%  \\
+Baja similitud (> 0.6) & 8 & 35\% \\
+Ausente (< 0.6) & 2 & 55\% \\
+\hline
+\end{tabular}
+\caption{Porcentaje de similitud semántica de las historias de usuario generadas}
+\label{tab:hu_estados}
+\end{table}
+
 Se observa además que en algunos casos una única historia generada presenta alta similitud con múltiples historias esperadas. Esto muestra una diferencia en la granularidad a la hora de redactar las historias: el modelo tiende a agrupar múltiples funcionalidades en una sola descripción, a diferencia del conjunto esperado que presenta una descomposición más detallada. En la tabla \ref{tab:granularity_example} se muestra un ejemplo que representa esta situación.
 
 \begin{longtable}{|c|c|c|}
@@ -884,6 +901,29 @@ Esta historia presenta una similitud significativamente baja con sus mejores coi
 En conjunto estos resultados evidencian limitaciones del enfoque basado (al menos de manera exclusiva) en similitud semántica, ya que puede producir alineaciones incorrectas desde el punto de vista funcional y no capturar de manera adecuada las diferencias en granularidad o tipo de requisito.
 Esto refuerza la necesidad de complementar la evaluación automática con un análisis manual que permita validar la correspondencia funcional real entre historias, aunque  el enfoque propuesto facilita significativamente este proceso, para el caso de la alineación semántica la presentación de las mejores coincidencias (top-3) permite al analista identificar rápidamente las relaciones más relevantes y detectar posibles inconsistencias, como alineaciones incorrectas o casos de baja similitud. La evaluación automática entonces no reemplaza la revisión manual, sino que actúa como una herramienta de apoyo que mejora la eficiencia. 
 Los resultados de alineación si bien son relevantes y evidencian parte de la calidad de la generación, no resultan suficientes para asegurar la correctitud del contenido generado, es necesario analizar adicionalmente otras dimensiones, como la cobertura del dominio o la detección de alucinaciones.
+
+\subsection{Alineación semántica de los criterios de aceptación }
+Luego de obtener la alineación semántica de las historias generadas con las historias esperadas, se obtuvo la alineación de los criterios de aceptación generados con los criterios de aceptación esperados. Para las historias generadas que no tienen una historia esperada alineada, no se realizo esta comparación.
+En la tabla \ref{tab:alignment_criteria} se muestra la similitud semántica para todos los criterios de aceptación generados con las referencias  correspondientes.
+
+En resumen, de los 31 criterios de aceptación esperados, la mayoría no obtuvo alineación con los criterios de aceptación esperados. Solamente 3 criterios son similares a los esperados y 14 presentan una similitud semántica baja. Los porcentajes se muestran en la tabla \ref{tab:ca_estados}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Similitud Semántica} & \textbf{Criterios Generados} & \textbf{Porcentaje} \\
+\hline
+Similar  (> 0.8) & 3  & 10\%  \\
+Baja similitud (> 0.6) & 11 & 35\% \\
+Ausente (< 0.6)& 17 & 55\% \\
+\hline
+\end{tabular}
+\caption{Porcentaje de similitud semántica de los criterios de aceptación generados}
+\label{tab:ca_estados}
+\end{table}
+
+Se encontró una baja alineación entre los criterios de aceptación generados y los esperados. Esto se corresponde con lo encontrado en el análisis manual, donde la mayoría de las historias de usuario no son consideradas como estimables por falta de detalles.
 
 \subsection{Cobertura del dominio funcional}
 En esta sección se presentan los resultados de cobertura obtenidos al aplicar el análisis definido en el Capítulo \ref{cap:evaluacion} sobre los conjuntos de historias esperadas y generadas. El análisis se basa en el grado de correspondencia semántica entre las funcionalidades del dominio y las historias de usuario.
@@ -948,55 +988,51 @@ En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de a
 
 \newpage
 
-\subsection{Grafo de similitud semántica}
+% \subsection{Grafo de similitud semántica}
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{resultados/grafo/completo.png}
-\end{wrapfigure}
+% \begin{wrapfigure}{r}{0.5\textwidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{resultados/grafo/completo.png}
+% \end{wrapfigure}
 
-Se construyó el gráfico para nuestra solución, con el fin de interpretar de manera gráfica los resultados obtenidos. El grafo completo está reportado en el Anexo (ref), pero ya que la visualización completa del mismo implica reducir mucho el tamaño de imagen, se analizan subgrafos representativos, que son partes del grafo completo resultado de la aplicación de la metodología.
-
-
-\subsubsection{Caso 1: Alineación semántica fuerte}
-\begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
-    \centering
-    \includegraphics[width=0.38\textwidth]{resultados/grafo/pacientes.png}
-    \caption{Similitud semántica relativas a funcionalidades/historias correspondientes a Pacientes}
-\end{wrapfigure}
-
-Este
-
-\subsubsection{Caso 2: Cobertura parcial}
-\begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
-    \centering
-    \includegraphics[width=0.38\textwidth]{resultados/grafo/coberturaParcial.png}
-    \caption{Ejemplo de cobertura parcial}
-\end{wrapfigure}
-
-Este
-
-\subsubsection{Caso 3: Funcionalidades no cubiertas}
-\begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
-    \centering
-    \includegraphics[width=0.38\textwidth]{resultados/grafo/funcionalidadesNoCubiertas.png}
-    \caption{Funcionalidades no cubiertas}
-\end{wrapfigure}
-
-Este
-
-\subsubsection{Caso 4: Potencial alucinación}
-\begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
-    \centering
-    \includegraphics[width=0.38\textwidth]{resultados/grafo/roles.png}
-    \caption{Ejemplo de imagen}
-\end{wrapfigure}
-
-Este
+% Se construyó el gráfico para nuestra solución, con el fin de interpretar de manera gráfica los resultados obtenidos. El grafo completo está reportado en el Anexo (ref), pero ya que la visualización completa del mismo implica reducir mucho el tamaño de imagen, se analizan subgrafos representativos, que son partes del grafo completo resultado de la aplicación de la metodología.
 
 
+% \subsubsection{Caso 1: Alineación semántica fuerte}
+% \begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
+%     \centering
+%     \includegraphics[width=0.38\textwidth]{resultados/grafo/pacientes.png}
+%     \caption{Similitud semántica relativas a funcionalidades/historias correspondientes a Pacientes}
+% \end{wrapfigure}
 
-\subsubsection{Evaluación de criterios de aceptación}
+% Este
+
+% \subsubsection{Caso 2: Cobertura parcial}
+% \begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
+%     \centering
+%     \includegraphics[width=0.38\textwidth]{resultados/grafo/coberturaParcial.png}
+%     \caption{Ejemplo de cobertura parcial}
+% \end{wrapfigure}
+
+% Este
+
+% \subsubsection{Caso 3: Funcionalidades no cubiertas}
+% \begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
+%     \centering
+%     \includegraphics[width=0.38\textwidth]{resultados/grafo/funcionalidadesNoCubiertas.png}
+%     \caption{Funcionalidades no cubiertas}
+% \end{wrapfigure}
+
+% Este
+
+% \subsubsection{Caso 4: Potencial alucinación}
+% \begin{wrapfigure}{r}{0.4\textwidth} % r = derecha, l = izquierda
+%     \centering
+%     \includegraphics[width=0.38\textwidth]{resultados/grafo/roles.png}
+%     \caption{Ejemplo de imagen}
+% \end{wrapfigure}
+
+% Este
 
 \subsubsection{Discusión sobre Similitud Semántica}
 Se desarrolló una metodología automática 
