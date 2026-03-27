@@ -434,6 +434,8 @@ AutoStory: AI-Powered Ticket Creation for Jira & Marketplace 02 \\
 
 Este anexo contiene las historias de usuario esperadas construidas por nosotros, en la Tabla \ref{tab:historias_esperadas}, junto a sus criterios de aceptación en la Tabla \ref{tab:criterios_esperados}.
 
+Las funcionalidades esperadas también fueron construidas por nosotros, están presentes en la tabla \ref{tab:funcionalidedes_esperadas}.
+
 \begin{longtable}{|c|p{12cm}|}
 \caption{Historias de Usuario Esperadas} \label{tab:historias_esperadas} \\
 \hline
@@ -627,7 +629,7 @@ ACE29.3 & HUE29 & The system must associate the invoice with the patient and the
 
 ACE31.1 & HUE31 & The system must include in the invoice the patient's full name, medication name, date, and total cost. \\ \hline
 ACE31.2 & HUE31 & The system must include a unique identifier in the invoice. \\ \hline
-ACE31.3 & HUE31 & The system must associate the invoice with the patient and the medication. \\ \hline
+ACE31.3 & HUE31 & The systedatem must associate the invoice with the patient and the medication. \\ \hline
 
 ACE32.1 & HUE32 & The system must have a search field that allows searching by identity document. \\ \hline
 ACE32.2 & HUE32 & The system must display a list of results matching the entered data. \\ \hline
@@ -733,304 +735,85 @@ ACE57.5 & HUE57 & The system must display an error if the start date is later th
 ACE57.6 & HUE57 & The system must display an error if the end date is later than the current date. \\ \hline
 \end{longtable}
 
+\begin{longtable}{|c|l|p{9cm}|}
+\caption{Funcionalidades del sistema por categoría.}
+\label{tab:funcionalidades} \\
+\hline
+\textbf{Ref.} & \textbf{Categoría} & \textbf{Funcionalidad} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Ref.} & \textbf{Categoría} & \textbf{Funcionalidad} \\
+\hline
+\endhead
+
+F1 & Pacientes & Register patients with personal and medical data \\ \hline
+F2 & Pacientes & Assign a unique identifier to each patient \\ \hline
+F3 & Pacientes & Modify patient personal and contact information \\ \hline
+F4 & Pacientes & Record patient medical background such as allergies or chronic diseases \\ \hline
+F5 & Pacientes & Search patients by name, identity document or identifier \\ \hline
+F6 & Pacientes & View complete patient information \\ \hline
+F7 & Pacientes & Access patient personal and clinical information \\ \hline
+F8 & Turnos & Create medical appointments linking patient, specialty and doctor \\ \hline
+F9 & Turnos & View availability of registered doctors \\ \hline
+F10 & Turnos & Prevent overlapping medical appointments \\ \hline
+F11 & Turnos & Modify appointment date and time \\ \hline
+F12 & Turnos & Cancel existing appointments \\ \hline
+F13 & Turnos & Notify patients when appointments are modified or canceled \\ \hline
+F14 & Turnos & Manage appointment lifecycle and status \\ \hline
+F15 & Turnos & Track appointment states such as confirmed, canceled or attended \\ \hline
+F16 & Historia Clínica & Register diagnoses, treatments and clinical progress \\ \hline
+F17 & Historia Clínica & Edit electronic clinical records \\ \hline
+F18 & Historia Clínica & Associate a date with each clinical record entry \\ \hline
+F19 & Historia Clínica & Store patient medical and clinical information \\ \hline
+F20 & Historia Clínica & Restrict access to clinical information to authorized users \\ \hline
+F21 & Historia Clínica & Allow doctors to access and review patient clinical history \\ \hline
+F22 & Historia Clínica & Allow patients to consult their electronic clinical record \\ \hline
+F23 & Historia Clínica & Secure management of electronic medical records \\ \hline
+F24 & Personal & Register medical professionals with personal information \\ \hline
+F25 & Personal & Associate medical specialties with professionals \\ \hline
+F26 & Personal & Manage medical professional information \\ \hline
+F27 & Personal & Define and modify doctor attention hours \\ \hline
+F28 & Personal & Activate or deactivate medical professionals for scheduling \\ \hline
+F29 & Personal & Manage healthcare staff availability \\ \hline
+F30 & Personal & Manage user roles and access permissions \\ \hline
+F31 & Personal & Validate permissions before performing system actions \\ \hline
+F32 & Facturación & Generate electronic invoices for medical consultations \\ \hline
+F33 & Facturación & Generate invoices for medication delivery \\ \hline
+F34 & Facturación & Associate invoices with patients and medical services \\ \hline
+F35 & Facturación & Assign a unique identifier to each invoice \\ \hline
+F36 & Facturación & Send automatic notifications when invoices are generated \\ \hline
+F37 & Facturación & Attach digital invoices to patient notifications \\ \hline
+F38 & Facturación & Manage billing related to healthcare services \\ \hline
+F39 & Facturación & Store financial documents and proof of payment \\ \hline
+F40 & Inventario & Register medications and medical supplies in the system \\ \hline
+F41 & Inventario & Store stock levels and expiration dates of medications \\ \hline
+F42 & Inventario & Update inventory stock when medication deliveries are recorded \\ \hline
+F43 & Inventario & Detect minimum stock levels in the inventory \\ \hline
+F44 & Inventario & Notify when medications or supplies are about to expire \\ \hline
+F45 & Inventario & Consult inventory sorted by quantity or expiration date \\ \hline
+F46 & Inventario & Track pharmacy inventory and supplies availability \\ \hline
+F47 & Inventario & Manage medication and supplies stock control \\ \hline
+F48 & Reportes & Generate statistical reports for healthcare data \\ \hline
+F49 & Reportes & Generate financial reports of hospital income \\ \hline
+F50 & Reportes & Report number of consultations by medical specialty \\ \hline
+F51 & Reportes & Report appointment status statistics \\ \hline
+F52 & Reportes & Report medication and supplies consumption \\ \hline
+F53 & Reportes & Filter reports using date ranges \\ \hline
+F54 & Reportes & Analyze system usage and healthcare metrics \\ \hline
+
+\end{longtable}
+
+
+
+
 % ===== Anexo 4 =====
 \newpage
 \vspace{0.75\baselineskip}
 {\large\bfseries Anexo 4\par}
 \vspace{0.25\baselineskip}
 
-Alineación de historias generadas y las tres correspondientes historias esperadas, aquellas que tienen la mayor similitud semántica.
-
-% \renewcommand{\arraystretch}{1.2}
-
-% \begin{longtable}{|c|c|c|c|}
-% \hline
-% \textbf{\#} & \textbf{Historia generada} & \textbf{Top-3 historias esperadas} & \textbf{Similitud} \\
-% \hline
-% \endfirsthead
-
-% \hline
-% \textbf{\#} & \textbf{Historia generada} & \textbf{Top-3 historias esperadas} & \textbf{Similitud} \\
-% \hline
-% \endhead
-
-% 0 &
-% As an administrative staff member, I want to register patients with personal data and medical background...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to register a new patient's data to enroll them in the system. \\
-% As administrative staff, I want to register a patient's medical background in their electronic clinical record to understand their health status. \\
-% As administrative staff, I want to register an appointment to schedule a patient's medical care.
-% }
-% &
-% 0.8612 / 0.8227 / 0.7280
-% \\ \hline
-
-% 1 &
-% As an administrative staff member, I want to modify the personal and contact details of a registered patient...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to edit a registered patient's data to keep the information up to date. \\
-% As administrative staff, I want to edit a registered doctor's data to keep the information up to date. \\
-% As administrative staff, I want to edit a doctor's attention hours to keep the information up to date.
-% }
-% &
-% 0.8599 / 0.8337 / 0.6954
-% \\ \hline
-
-% 2 &
-% As an administrative staff member, I want to search for patients by name, identity document, or identifier number...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to search for a patient by their patient number to retrieve their record. \\
-% As administrative staff, I want to search for a patient by their identity document to retrieve their record. \\
-% As administrative staff, I want to search for a patient by their name to access their information.
-% }
-% &
-% 0.8921 / 0.8908 / 0.8800
-% \\ \hline
-
-% 3 &
-% As an authorized user, I want to visualize a patient's complete information...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to view a patient's complete information to consult their personal data. \\
-% As administrative staff, I want to view a patient's scheduled appointments to consult their information. \\
-% As a doctor, I want to access a patient's clinical record to review their prior information.
-% }
-% &
-% 0.8349 / 0.6402 / 0.6389
-% \\ \hline
-
-% 4 &
-% As an administrative staff member, I want to create medical appointments by associating the patient, specialty, and professional...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to register an appointment to schedule a patient's medical care. \\
-% As administrative staff, I want to define a doctor's attention hours to enable appointment assignment. \\
-% As administrative staff, I want to register doctors with their respective specialties to enroll them in the system.
-% }
-% &
-% 0.7197 / 0.7018 / 0.6890
-% \\ \hline
-
-% 5 &
-% As an administrative staff member, I want to visualize the availability of registered doctors...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to register doctors with their respective specialties to enroll them in the system. \\
-% As administrative staff, I want to view a patient's scheduled appointments to consult their information. \\
-% As an analyst, I want to view appointment statistics by specialty to evaluate the workload.
-% }
-% &
-% 0.6867 / 0.6610 / 0.6383
-% \\ \hline
-
-% 6 &
-% As an administrative staff member, I want to modify or cancel existing appointments...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to cancel an existing appointment to free up the time slot in the schedule. \\
-% As administrative staff, I want to edit an existing appointment to change its date without losing the information. \\
-% As administrative staff, I want to edit a doctor's attention hours to keep the information up to date.
-% }
-% &
-% 0.8235 / 0.8067 / 0.6964
-% \\ \hline
-
-% 7 &
-% As a patient, I want to receive notifications when my appointment is modified or canceled...
-% &
-% \parbox{\linewidth}{\centering
-% As a patient, I want to be notified by email when my appointment is modified so I stay informed. \\
-% As a patient, I want to be notified by text message to my phone number when my appointment is modified so I stay informed. \\
-% As administrative staff, I want to view a patient's scheduled appointments to consult their information.
-% }
-% &
-% 0.9096 / 0.8544 / 0.6655
-% \\ \hline
-
-% 8 &
-% As an administrative staff member, I want to manage the status of appointments throughout their lifecycle...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to register an appointment to schedule a patient's medical care. \\
-% As administrative staff, I want to view a patient's scheduled appointments to consult their information. \\
-% As administrative staff, I want to define a doctor's attention hours to enable appointment assignment.
-% }
-% &
-% 0.7575 / 0.7293 / 0.6764
-% \\ \hline
-
-% 9 &
-% As a doctor, I want to register diagnoses, treatments, and patient’s clinical progress...
-% &
-% \parbox{\linewidth}{\centering
-% As administrative staff, I want to register a patient's medical background in their electronic clinical record to understand their health status. \\
-% As a doctor, I want to register the diagnosis made during the appointment to document the medical care provided. \\
-% As a patient, I want to consult my electronic clinical record to access my medical information.
-% }
-% &
-% 0.8207 / 0.7201 / 0.6893
-% \\ \hline
-
-% 10 &
-% As a patient, I want to consult my electronic clinical record...
-% &
-% \parbox{\linewidth}{\centering
-% As a patient, I want to consult my electronic clinical record to access my medical information. \\
-% As administrative staff, I want to register a patient's medical background in their electronic clinical record to understand their health status. \\
-% As a doctor, I want to access a patient's clinical record to review their prior information.
-% }
-% &
-% 0.9514 / 0.8082 / 0.7764
-% \\ \hline
-
-% 11 &
-% As an administrator, I want to register medical professionals...
-% &
-% \begin{tabular}{c}
-% As administrative staff, I want to register doctors with their respective specialties to enroll them in the system. \\
-% As administrative staff, I want to activate a registered doctor to keep the information up to date. \\
-% As administrative staff, I want to register a new patient's data to enroll them in the system.
-% \end{tabular}
-% &
-% 0.8332 / 0.7226 / 0.7187
-% \\ \hline
-
-% 12 &
-% As an administrator, I want to define and modify attention hours...
-% &
-% \begin{tabular}{c}
-% As administrative staff, I want to define a doctor's attention hours to enable appointment assignment. \\
-% As administrative staff, I want to edit a doctor's attention hours to keep the information up to date. \\
-% As administrative staff, I want to register an appointment to schedule a patient's medical care.
-% \end{tabular}
-% &
-% 0.8282 / 0.7965 / 0.6766
-% \\ \hline
-
-% 13 &
-% As an administrator, I want to manage roles and access permissions...
-% &
-% \begin{tabular}{c}
-% As the system, I want to define system roles to organize access to functionalities. \\
-% As the system, I want to associate permissions with each role to control access to system functionalities. \\
-% As administrative staff, I want to edit a doctor's attention hours to keep the information up to date.
-% \end{tabular}
-% &
-% 0.7749 / 0.7596 / 0.2863
-% \\ \hline
-
-% 14 &
-% As an administrative staff member, I want to generate electronic invoices...
-% &
-% \begin{tabular}{c}
-% As administrative staff, I want to generate an invoice associated with a medication to have a payment receipt. \\
-% As administrative staff, I want to generate an invoice associated with an appointment to have a payment receipt. \\
-% As a pharmacist, I want to generate an invoice associated with a medication to have a payment receipt.
-% \end{tabular}
-% &
-% 0.8436 / 0.8177 / 0.7646
-% \\ \hline
-
-% 15 &
-% As a patient, I want to receive automatic notifications with attached digital invoices...
-% &
-% \begin{tabular}{c}
-% As a patient, I want to be notified by text message to my phone number with the invoice information to stay informed about the charge. \\
-% As a patient, I want to receive an email notification with the invoice attached to access the payment receipt. \\
-% As administrative staff, I want to generate an invoice associated with a medication to have a payment receipt.
-% \end{tabular}
-% &
-% 0.7938 / 0.7842 / 0.6950
-% \\ \hline
-
-% 16 &
-% As a pharmacist, I want to register medications and supplies...
-% &
-% \begin{tabular}{c}
-% As a pharmacist, I want to register supplies to keep the hospital inventory up to date. \\
-% As a pharmacist, I want to register medications to keep the hospital inventory up to date. \\
-% As a pharmacist, I want to consult the medication inventory sorted by expiration date to identify medications about to expire.
-% \end{tabular}
-% &
-% 0.8840 / 0.8820 / 0.7716
-% \\ \hline
-
-% 17 &
-% As a pharmacist, I want to automatically update stock...
-% &
-% \begin{tabular}{c}
-% As a pharmacist, I want to register medications to keep the hospital inventory up to date. \\
-% As a pharmacist, I want to register supplies to keep the hospital inventory up to date. \\
-% As a pharmacist, I want to edit how many medications are available to keep the hospital inventory up to date.
-% \end{tabular}
-% &
-% 0.6956 / 0.6826 / 0.6626
-% \\ \hline
-
-% 18 &
-% As a pharmacist, I want to be notified when stock is low...
-% &
-% \begin{tabular}{c}
-% As a pharmacist, I want to consult the supply inventory sorted by expiration date to identify supplies about to expire. \\
-% As a pharmacist, I want to know when a supply is about to expire to make timely decisions. \\
-% As a pharmacist, I want to consult the medication inventory sorted by expiration date to identify medications about to expire.
-% \end{tabular}
-% &
-% 0.7368 / 0.7102 / 0.7092
-% \\ \hline
-
-% 19 &
-% As a pharmacist, I want to consult inventory sorted by available quantity...
-% &
-% \begin{tabular}{c}
-% As a pharmacist, I want to consult the supply inventory sorted by expiration date to identify supplies about to expire. \\
-% As a pharmacist, I want to consult the supply inventory sorted by available quantity to quickly identify supplies with the lowest or highest stock. \\
-% As a pharmacist, I want to consult the medication inventory sorted by available quantity to quickly identify medications with the lowest or highest stock.
-% \end{tabular}
-% &
-% 0.8704 / 0.8611 / 0.8601
-% \\ \hline
-
-% 20 &
-% As an analyst, I want to generate reports...
-% &
-% \begin{tabular}{c}
-% As an analyst, I want to view financial reports of the services to evaluate the hospital's income and economic performance. \\
-% As an analyst, I want to view appointment statistics by specialty to evaluate the workload. \\
-% As an analyst, I want to view supply consumption to evaluate the hospital's inventory usage.
-% \end{tabular}
-% &
-% 0.6356 / 0.6126 / 0.5485
-% \\ \hline
-
-% 21 &
-% As a system administrator, I want to ensure date validations prevent invalid ranges...
-% &
-% \begin{tabular}{c}
-% As a pharmacist, I want to consult the supply inventory sorted by expiration date to identify supplies about to expire. \\
-% As a pharmacist, I want to consult the medication inventory sorted by expiration date to identify medications about to expire. \\
-% As a pharmacist, I want to know when a medication is about to expire to make timely decisions.
-% \end{tabular}
-% &
-% 0.3132 / 0.3044 / 0.2991
-% \\ \hline
-
-% 22 &
-% As a system administrator, I want to ensure notifications are sent within a reasonable time...
-% &
-% \begin{tabular}{c}
-% As a patient, I want to be notified by email when my appointment is modified so I stay informed. \\
-% As a pharmacist, I want to know when a supply is about to expire to make timely decisions. \\
-% As a patient, I want to be notified by text message to my phone number when my appointment is modified so I stay informed.
-% \end{tabular}
-% &
-% 0.4149 / 0.3442 / 0.3435
-% \\ \hline
-
-% \end{longtable}
+En la tabla \ref{tab:alignment_histories} se muestra la alineación de historias generadas y las tres historias esperadas correspondientes, aquellas que tienen la mayor similitud semántica.
 
 \begin{longtable}{|c|c|c|}
 \caption{Alineación de historias generadas y las tres correspondientes historias esperadas, aquellas que tienen la mayor similitud semántica.}
@@ -1071,7 +854,7 @@ HU23 & HUE16 | HUE52 | HUE17 & 0.4149 | 0.3442 | 0.3435 \\ \hline
 \end{longtable}
 
 
-Alineación de criterios generadas y los correspondientes criterios esperados, aquellos que tienen la mayor similitud semántica.
+En la tabla \ref{tab:alignment_criteria} se muestra la alineación de criterios generadas y los correspondientes criterios esperados, aquellos que tienen la mayor similitud semántica.
 
 \begin{longtable}{|c|p{5cm}|p{4cm}|}
 \caption{Alineación de criterios generadas y los correspondientes criterios esperados, ordenados por similitud semántica.}
@@ -1119,5 +902,137 @@ CA21.1 & CAE56.1 | CAE56.2 | CAE56.3 | CAE56.4 | CAE56.5 | CAE56.6 & 0.2759 | 0.
 CA21.2 & CAE56.4 | CAE56.5 | CAE56.6 | CAE56.3 | CAE56.2 | CAE56.1 & 0.6086 | 0.3515 | 0.3312 | 0.2378 | 0.2327 | 0.1424 \\ \hline
 \end{longtable}
 
+En la tabla \ref{tab:funcionalidades_historias_esperadas} se muestra la similitud de las funcionalidades con las historias esperadas.
+
+\begin{longtable}{|c|c|c|}
+\caption{Similitud semántica entre funcionalidades e historias de usuario esperadas} 
+\label{tab:funcionalidades_historias_esperadas}\\
+\hline
+\textbf{Ref. Funcionalidad} & \textbf{Top-3 Ref. Historia Esperada} & \textbf{Similitud} \\
+\hline
+\endhead
+
+F0 & HU1 | HU4 | HU13 & 0.7888 | 0.6946 | 0.5996 \\ \hline
+F1 & HU2 | HU42 | HU30 & 0.7433 | 0.5912 | 0.5842 \\ \hline
+F2 & HU3 | HU23 | HU24 & 0.7452 | 0.7276 | 0.6199 \\ \hline
+F3 & HU4 | HU18 | HU19 & 0.7273 | 0.6530 | 0.6052 \\ \hline
+F4 & HU9 | HU6 | HU32 & 0.8525 | 0.8451 | 0.8041 \\ \hline
+F5 & HU11 | HU18 | HU4 & 0.8006 | 0.6583 | 0.6132 \\ \hline
+F6 & HU11 | HU18 | HU20 & 0.8231 | 0.7849 | 0.7251 \\ \hline
+F7 & HU13 | HU12 | HU22 & 0.6395 | 0.6264 | 0.6245 \\ \hline
+F8 & HU21 | HU26 | HU25 & 0.7009 | 0.6708 | 0.5526 \\ \hline
+F9 & HU13 | HU22 | HU12 & 0.5447 | 0.5275 | 0.4956 \\ \hline
+F10 & HU15 | HU14 | HU24 & 0.7862 | 0.6505 | 0.6366 \\ \hline
+F11 & HU14 | HU15 | HU25 & 0.7836 | 0.5554 | 0.4248 \\ \hline
+F12 & HU16 | HU17 | HU24 & 0.7814 | 0.6827 | 0.5782 \\ \hline
+F13 & HU13 | HU12 | HU22 & 0.5664 | 0.5619 | 0.5389 \\ \hline
+F14 & HU12 | HU19 | HU13 & 0.5837 | 0.5073 | 0.4818 \\ \hline
+F15 & HU19 | HU4 | HU1 & 0.6261 | 0.5658 | 0.5102 \\ \hline
+F16 & HU3 | HU23 | HU4 & 0.7746 | 0.7552 | 0.7376 \\ \hline
+F17 & HU4 | HU18 | HU1 & 0.6244 | 0.5570 | 0.5554 \\ \hline
+F18 & HU4 | HU11 | HU18 & 0.6792 | 0.6441 | 0.6065 \\ \hline
+F19 & HU11 | HU18 | HU35 & 0.6304 | 0.6253 | 0.5777 \\ \hline
+F20 & HU18 | HU11 | HU4 & 0.7562 | 0.6503 | 0.6372 \\ \hline
+F21 & HU20 | HU4 | HU18 & 0.8195 | 0.7300 | 0.6964 \\ \hline
+F22 & HU4 | HU20 | HU3 & 0.5893 | 0.5740 | 0.5371 \\ \hline
+F23 & HU21 | HU26 | HU1 & 0.6785 | 0.6721 | 0.6568 \\ \hline
+F24 & HU21 | HU26 | HU22 & 0.6219 | 0.4619 | 0.4167 \\ \hline
+F25 & HU23 | HU21 | HU11 & 0.6523 | 0.6359 | 0.6187 \\ \hline
+F26 & HU22 | HU24 | HU13 & 0.8408 | 0.7258 | 0.4943 \\ \hline
+F27 & HU25 | HU26 | HU22 & 0.6416 | 0.6402 | 0.5984 \\ \hline
+F28 & HU22 | HU13 | HU26 & 0.5568 | 0.5540 | 0.5109 \\ \hline
+F29 & HU28 | HU27 | HU23 & 0.6892 | 0.6069 | 0.2454 \\ \hline
+F30 & HU28 | HU27 | HU13 & 0.4926 | 0.4164 | 0.1241 \\ \hline
+F31 & HU34 | HU29 | HU31 & 0.7735 | 0.7493 | 0.7308 \\ \hline
+F32 & HU34 | HU31 | HU29 & 0.8305 | 0.8126 | 0.6821 \\ \hline
+F33 & HU34 | HU42 | HU31 & 0.6675 | 0.6531 | 0.6421 \\ \hline
+F34 & HU30 | HU34 | HU31 & 0.8485 | 0.5443 | 0.5422 \\ \hline
+F35 & HU36 | HU29 | HU37 & 0.6035 | 0.5589 | 0.5412 \\ \hline
+F36 & HU36 | HU37 | HU34 & 0.7147 | 0.6556 | 0.6166 \\ \hline
+F37 & HU13 | HU37 | HU34 & 0.5113 | 0.4706 | 0.4430 \\ \hline
+F38 & HU34 | HU29 | HU31 & 0.3208 | 0.3149 | 0.3120 \\ \hline
+F39 & HU39 | HU38 | HU40 & 0.8391 | 0.8059 | 0.6603 \\ \hline
+F40 & HU46 | HU44 | HU43 & 0.7599 | 0.7587 | 0.6809 \\ \hline
+F41 & HU40 | HU41 | HU39 & 0.6062 | 0.6001 | 0.5965 \\ \hline
+F42 & HU45 | HU43 | HU46 & 0.5937 | 0.5475 | 0.4593 \\ \hline
+F43 & HU52 | HU51 | HU44 & 0.7852 | 0.7676 | 0.6943 \\ \hline
+F44 & HU46 | HU45 | HU43 & 0.7853 | 0.7512 | 0.7319 \\ \hline
+F45 & HU46 | HU39 | HU45 & 0.7469 | 0.7378 | 0.7339 \\ \hline
+F46 & HU39 | HU41 | HU43 & 0.7159 | 0.6860 | 0.6750 \\ \hline
+F47 & HU4 | HU56 | HU55 & 0.4612 | 0.4593 | 0.4508 \\ \hline
+F48 & HU56 | HU57 | HU34 & 0.7436 | 0.5082 | 0.4741 \\ \hline
+F49 & HU55 | HU21 | HU19 & 0.6585 | 0.5598 | 0.5315 \\ \hline
+F50 & HU55 | HU12 | HU22 & 0.7143 | 0.5949 | 0.5291 \\ \hline
+F51 & HU39 | HU47 | HU41 & 0.6220 | 0.6135 | 0.5854 \\ \hline
+F52 & HU44 | HU46 | HU56 & 0.2918 | 0.2838 | 0.2625 \\ \hline
+F53 & HU57 | HU1 | HU56 & 0.5130 | 0.4477 | 0.4460 \\ \hline
+
+\end{longtable}
+
+En la tabla \ref{tab:funcionalidades_historias_generadas} se muestra la similitud de las funcionalidades con las historias generadas.
+
+\begin{longtable}{|c|c|c|}
+\caption{Similitud semántica entre funcionalidades e historias de usuario generadas} 
+\label{tab:funcionalidades_historias_generadas}\\
+\hline
+\textbf{Ref. Funcionalidad} & \textbf{Top-3 Ref. Historia Generada} & \textbf{Similitud} \\
+\hline
+\endhead
+
+F1  & H1 | H4 | H13 & 0.7888 | 0.6946 | 0.5996 \\ \hline
+F2  & H2 | H42 | H30 & 0.7433 | 0.5912 | 0.5842 \\ \hline
+F3  & H3 | H23 | H24 & 0.7452 | 0.7276 | 0.6199 \\ \hline
+F4  & H4 | H18 | H19 & 0.7273 | 0.6530 | 0.6052 \\ \hline
+F5  & H9 | H6 | H32 & 0.8525 | 0.8451 | 0.8041 \\ \hline
+F6  & H11 | H18 | H4 & 0.8006 | 0.6583 | 0.6132 \\ \hline
+F7  & H11 | H18 | H20 & 0.8231 | 0.7849 | 0.7251 \\ \hline
+F8  & H13 | H12 | H22 & 0.6395 | 0.6264 | 0.6245 \\ \hline
+F9  & H21 | H26 | H25 & 0.7009 | 0.6708 | 0.5526 \\ \hline
+F10 & H13 | H22 | H12 & 0.5447 | 0.5275 | 0.4956 \\ \hline
+F11 & H15 | H14 | H24 & 0.7862 | 0.6505 | 0.6366 \\ \hline
+F12 & H14 | H15 | H25 & 0.7836 | 0.5554 | 0.4248 \\ \hline
+F13 & H16 | H17 | H24 & 0.7814 | 0.6827 | 0.5782 \\ \hline
+F14 & H13 | H12 | H22 & 0.5664 | 0.5619 | 0.5389 \\ \hline
+F15 & H12 | H19 | H13 & 0.5837 | 0.5073 | 0.4818 \\ \hline
+F16 & H19 | H4 | H1 & 0.6261 | 0.5658 | 0.5102 \\ \hline
+F17 & H3 | H23 | H4 & 0.7746 | 0.7552 | 0.7376 \\ \hline
+F18 & H4 | H18 | H1 & 0.6244 | 0.5570 | 0.5554 \\ \hline
+F19 & H4 | H11 | H18 & 0.6792 | 0.6441 | 0.6065 \\ \hline
+F20 & H11 | H18 | H35 & 0.6304 | 0.6253 | 0.5777 \\ \hline
+F21 & H18 | H11 | H4 & 0.7562 | 0.6503 | 0.6372 \\ \hline
+F22 & H20 | H4 | H18 & 0.8195 | 0.7300 | 0.6964 \\ \hline
+F23 & H4 | H20 | H3 & 0.5893 | 0.5740 | 0.5371 \\ \hline
+F24 & H21 | H26 | H1 & 0.6785 | 0.6721 | 0.6568 \\ \hline
+F25 & H21 | H26 | H22 & 0.6219 | 0.4619 | 0.4167 \\ \hline
+F26 & H23 | H21 | H11 & 0.6523 | 0.6359 | 0.6187 \\ \hline
+F27 & H22 | H24 | H13 & 0.8408 | 0.7258 | 0.4943 \\ \hline
+F28 & H25 | H26 | H22 & 0.6416 | 0.6402 | 0.5984 \\ \hline
+F29 & H22 | H13 | H26 & 0.5568 | 0.5540 | 0.5109 \\ \hline
+F30 & H28 | H27 | H23 & 0.6892 | 0.6069 | 0.2454 \\ \hline
+F31 & H28 | H27 | H13 & 0.4926 | 0.4164 | 0.1241 \\ \hline
+F32 & H34 | H29 | H31 & 0.7735 | 0.7493 | 0.7308 \\ \hline
+F33 & H34 | H31 | H29 & 0.8305 | 0.8126 | 0.6821 \\ \hline
+F34 & H34 | H42 | H31 & 0.6675 | 0.6531 | 0.6421 \\ \hline
+F35 & H30 | H34 | H31 & 0.8485 | 0.5443 | 0.5422 \\ \hline
+F36 & H36 | H29 | H37 & 0.6035 | 0.5589 | 0.5412 \\ \hline
+F37 & H36 | H37 | H34 & 0.7147 | 0.6556 | 0.6166 \\ \hline
+F38 & H13 | H37 | H34 & 0.5113 | 0.4706 | 0.4430 \\ \hline
+F39 & H34 | H29 | H31 & 0.3208 | 0.3149 | 0.3120 \\ \hline
+F40 & H39 | H38 | H40 & 0.8391 | 0.8059 | 0.6603 \\ \hline
+F41 & H46 | H44 | H43 & 0.7599 | 0.7587 | 0.6809 \\ \hline
+F42 & H40 | H41 | H39 & 0.6062 | 0.6001 | 0.5965 \\ \hline
+F43 & H45 | H43 | H46 & 0.5937 | 0.5475 | 0.4593 \\ \hline
+F44 & H52 | H51 | H44 & 0.7852 | 0.7676 | 0.6943 \\ \hline
+F45 & H20 | H17 | H19 & 0.8543 | 0.5867 | 0.5061 \\ \hline
+F46 & H17 | H20 | H18 & 0.7492 | 0.6896 | 0.6693 \\ \hline
+F47 & H17 | H18 | H20 & 0.6975 | 0.6330 | 0.6301 \\ \hline
+F48 & H21 | H1 | H10 & 0.6544 | 0.4800 | 0.4630 \\ \hline
+F49 & H21 | H15 | H9 & 0.6935 | 0.4681 | 0.4528 \\ \hline
+F50 & H21 | H6 | H5 & 0.6128 | 0.5854 | 0.5601 \\ \hline
+F51 & H9 | H21 | H6 & 0.7141 | 0.5938 | 0.5869 \\ \hline
+F52 & H17 | H21 | H20 & 0.5796 | 0.5030 | 0.4753 \\ \hline
+F53 & H21 | H22 | H20 & 0.5679 | 0.3972 | 0.2637 \\ \hline
+F54 & H21 | H1 | H10 & 0.5076 | 0.4582 | 0.4342 \\ \hline
+\end{longtable}
 
 \end{document}

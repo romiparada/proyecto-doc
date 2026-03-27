@@ -819,16 +819,18 @@ R23 & Sí \\
 Las referencias a las secciones del documento son correctas, lo que indica que la herramienta logra mantener la trazabilidad con el documento de entrada.
 
 \section{Similitud Semántica}
-El proceso de evaluación compara un conjunto de 23 historias de usuario generadas automáticamente mediante un modelo de lenguaje contra un conjunto de 57 historias de usuario esperadas, elaboradas manualmente por analistas humanos. Adicionalmente se generó automáticamente un conjunto de funcionalidades del dominio a partir del documento de requisitos del producto (PDR) que posteriormente fue refinado, siendo el conjunto final de 54 funcionalidades que permiten evaluar la cobertura funcional de ambas soluciones.
-El análisis se estructura en tres dimensiones principales:
-\begin{itemize}
-    \item Alineación semántica entre historias generadas y esperadas 
-    \item Cobertura del dominio funcional (tanto generadas como esperadas)
-    \item Detección de alucinaciones en las historias generadas 
-    \item Análisis de similitud semántica de criterios de aceptación entre historias alineadas
-\end{itemize}
+Siguiendo la metodologia descripta en el capitlo \ref{cap:evaluacion}, el proceso de evaluación compara el conjunto de 23 historias de usuario generadas por ClickUp, tabla \ref{tab:historias_clickup}, contra el conjunto de 57 historias de usuario esperadas elaboradas por nosotros, tabla \ref{tab:historias_esperadas}. Adicionalmente se generó automáticamente un conjunto de funcionalidades del dominio a partir del documento de requisitos del producto (PDR) que posteriormente fue refinado, siendo el conjunto final de 54 funcionalidades que permiten evaluar la cobertura funcional de ambas soluciones, tabla \ref{tab:funcionalidades_esperadas}.
 
-\subsection{Análisis de alineación semántica}
+% El análisis se estructura en tres dimensiones principales:
+% \begin{itemize}
+%     \item Alineación semántica entre historias generadas y esperadas 
+%     \item Análisis de similitud semántica de criterios de aceptación entre historias alineadas
+%     \item Cobertura del dominio funcional (tanto generadas como esperadas)
+%     \item Detección de alucinaciones en las historias generadas 
+
+% \end{itemize}
+
+\subsection{Alineación semántica entre historias generadas y esperadas}
 La alineación semántica entre historias generadas e historias esperadas se muestra en la tabla \ref{tab:alignment_histories}.
 Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0.7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
 
@@ -838,8 +840,8 @@ Los resultados de alineación indican que el modelo logra capturar en gran medid
 \hline
 \textbf{Similitud Semántica} & \textbf{Numero de Historias Generadas} & \textbf{Porcentaje} \\
 \hline
-Similar (> 0.8)   & 13  & 57\%  \\
-Baja similitud (> 0.6) & 8 & 35\% \\
+Alineadas (> 0.8)   & 13  & 57\%  \\
+Posible alineamiento (> 0.6) & 8 & 35\% \\
 Ausente (< 0.6) & 2 & 55\% \\
 \hline
 \end{tabular}
@@ -902,7 +904,7 @@ En conjunto estos resultados evidencian limitaciones del enfoque basado (al meno
 Esto refuerza la necesidad de complementar la evaluación automática con un análisis manual que permita validar la correspondencia funcional real entre historias, aunque  el enfoque propuesto facilita significativamente este proceso, para el caso de la alineación semántica la presentación de las mejores coincidencias (top-3) permite al analista identificar rápidamente las relaciones más relevantes y detectar posibles inconsistencias, como alineaciones incorrectas o casos de baja similitud. La evaluación automática entonces no reemplaza la revisión manual, sino que actúa como una herramienta de apoyo que mejora la eficiencia. 
 Los resultados de alineación si bien son relevantes y evidencian parte de la calidad de la generación, no resultan suficientes para asegurar la correctitud del contenido generado, es necesario analizar adicionalmente otras dimensiones, como la cobertura del dominio o la detección de alucinaciones.
 
-\subsection{Alineación semántica de los criterios de aceptación }
+\subsection{Análisis de similitud semántica de criterios de aceptación entre historias alineadas}
 Luego de obtener la alineación semántica de las historias generadas con las historias esperadas, se obtuvo la alineación de los criterios de aceptación generados con los criterios de aceptación esperados. Para las historias generadas que no tienen una historia esperada alineada, no se realizo esta comparación.
 En la tabla \ref{tab:alignment_criteria} se muestra la similitud semántica para todos los criterios de aceptación generados con las referencias  correspondientes.
 
@@ -914,8 +916,8 @@ En resumen, de los 31 criterios de aceptación esperados, la mayoría no obtuvo 
 \hline
 \textbf{Similitud Semántica} & \textbf{Criterios Generados} & \textbf{Porcentaje} \\
 \hline
-Similar  (> 0.8) & 3  & 10\%  \\
-Baja similitud (> 0.6) & 11 & 35\% \\
+Alineadas  (> 0.8) & 3  & 10\%  \\
+Posible alineamiento (> 0.6) & 11 & 35\% \\
 Ausente (< 0.6)& 17 & 55\% \\
 \hline
 \end{tabular}
@@ -946,7 +948,7 @@ No cubierta & 12 (22.2\%) & 13 (24.1\%) \\
 \label{tab:cobertura_funcional}
 \end{table}
 
-El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en el Capítulo \ref{cap:anexo}, Anexo 4.
+El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en la tabla \ref{tab:funcionalidades_historias_esperadas} y tabla \ref{tab:funcionalidades_historias_generadas} para las historias esperadas y las historias generadas respectivamente.
 
 Los resultados muestran que ambos conjuntos presentan una distribución de cobertura altamente similar. En ambos casos, aproximadamente la mitad de las funcionalidades se encuentran parcialmente cubiertas, mientras que alrededor de un tercio presenta cobertura completa.
 Las funcionalidades completamente cubiertas se corresponden principalmente con acciones explícitas, tales como el registro, consulta y modificación de información. En estos casos se observan valores de similitud elevados y correspondencias directas entre funcionalidades e historias.
