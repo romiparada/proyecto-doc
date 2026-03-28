@@ -1037,4 +1037,6 @@ En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de a
 % Este
 
 \subsubsection{Discusión sobre Similitud Semántica}
-Se desarrolló una metodología automática 
+Los resultados de la evaluación semántica son consistentes con las conclusiones de la evaluación manual en varios puntos concretos. La baja correspondencia en criterios de aceptación (10\% alineados) se corresponde con la baja estimabilidad encontrada en QUSF (42,9\%) e INVEST (9,5\%). La alta alineación de historias (92\% con al menos posible alineamiento) es coherente con lo observado en QUSF, donde la mayoría de las historias son conceptualmente sólidas y orientadas al problema, y en INVEST, donde el 95,2\% se considera negociable y valiosas. Por último, la detección de alucinaciones por similitud semántica identificó las mismas dos historias (HU22 y HU23) que el análisis manual. Esta consistencia entre ambos enfoques sugiere que la evaluación automática puede funcionar como un primer filtro antes de la revisión manual, ayudando a identificar los casos que necesitan más atención.
+
+Por otro lado, los resultados también muestran limitaciones del uso de SBERT. Como se observó en los casos de alineación incorrecta, textos que comparten vocabulario pueden obtener valores de similitud altos a pesar de referirse a funcionalidades distintas, mientras que diferencias como quién realiza una acción o el nivel de detalle de una historia no son capturadas por el modelo. Esto debe tenerse en cuenta a la hora de interpretar los valores de similitud obtenidos.
