@@ -1,16 +1,17 @@
-## Paso 1 - Sincronizar con overleaf y crear nueva rama
+## Paso 1 - Correr script para sincronizar con overleaf
 ```bash
 bash sync_con_overleaf.sh
 ```
+Este script se encarga de sincronizar con overleaf y crear una nueva rama para hacer cambios. Si queres hacer cambios sobre lo ultimo en overleaf simplemente corre el comando de arriba en la consola.
 
-## Paso 2 - Hacer los cambios!
+## Paso 2 - Hacer los cambios
 ```bash
 git add .
 git commit -m "Descripción de los cambios"
 git push
 ```
 
-## Paso 3 - Crear PR para los cambios!
+## Paso 3 - Crear PR para los cambios
 Se deberian subir solos al overleaf una vez que se aprueba y mergea la PR
 
 ### No quiero hacer una PR - No recomendado
