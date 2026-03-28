@@ -12,7 +12,8 @@ git push
 ```
 
 ## Paso 3 - Crear PR para los cambios
-Se deberian subir solos al overleaf una vez que se aprueba y mergea la PR
+Crea la PR en GitHub con tus cambios. Podes asignarnos para revisar los cambios. 
+Al mergear la PR los cambios se suben automaticamente a overleaf.
 
 ### No quiero hacer una PR - No recomendado
 Si no queres hacer una PR entonces:
