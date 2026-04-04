@@ -988,8 +988,6 @@ Los resultados indican que la mayoría de las historias generadas (69.57\%) se e
 
 En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de alucinación y es capaz de generar historias consistentes con el dominio. Sin embargo, los casos inciertos y de posible alucinación evidencian algunas limitaciones en la representación de algunas funcionalidades y restricciones del sistema. Concluimos que la detección de alucinaciones basada en similitud semántica resulta una herramienta útil para identificar inconsistencias.%, pero debe ser complementada con revisión manual para una mayor precisión.
 
-\newpage
-
 % \subsection{Grafo de similitud semántica}
 
 % \begin{wrapfigure}{r}{0.5\textwidth}
@@ -1040,3 +1038,66 @@ En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de a
 Los resultados de la evaluación semántica son consistentes con las conclusiones de la evaluación manual en varios puntos concretos. La baja correspondencia en criterios de aceptación (10\% alineados) se corresponde con la baja estimabilidad encontrada en QUSF (42,9\%) e INVEST (9,5\%). La alta alineación de historias (92\% con al menos posible alineamiento) es coherente con lo observado en QUSF, donde la mayoría de las historias son conceptualmente sólidas y orientadas al problema, y en INVEST, donde el 95,2\% se considera negociable y valiosas. Por último, la detección de alucinaciones por similitud semántica identificó las mismas dos historias (HU22 y HU23) que el análisis manual. Esta consistencia entre ambos enfoques sugiere que la evaluación automática puede funcionar como un primer filtro antes de la revisión manual, ayudando a identificar los casos que necesitan más atención.
 
 Por otro lado, los resultados también muestran limitaciones del uso de SBERT. Como se observó en los casos de alineación incorrecta, textos que comparten vocabulario pueden obtener valores de similitud altos a pesar de referirse a funcionalidades distintas, mientras que diferencias como quién realiza una acción o el nivel de detalle de una historia no son capturadas por el modelo. Esto debe tenerse en cuenta a la hora de interpretar los valores de similitud obtenidos.
+
+\subsection{Análisis del grafo de similitud semántica}
+
+El grafo de similitud semántica permite analizar la estructura de las relaciones entre historias generadas, historias esperadas y funcionalidades del dominio, esta representación aporta una visión complementaria al análisis basado en valores de similitud., lo que resulta útil para identificar patrones estructurales asociados a alineación, cobertura parcial y ausencia de correspondencias.
+
+En general, el grafo presenta múltiples componentes conectados que corresponden a distintos subdominios funcionales (por ejemplo, pacientes, facturación, inventario y reportes). Dentro de estos componentes se observan agrupamientos densos, donde historias generadas, historias esperadas y funcionalidades se conectan mediante valores de similitud elevados, indicando una adecuada alineación semántica del modelo en estos casos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figs/grafo/vistaGeneral.png}
+    \caption{Vista global del grafo de similitud semántica.}
+    \label{fig:grafo_global}
+\end{figure}
+
+Sin embargo, el principal valor del grafo es la identificación de posibles inconsistencias respecto al  comportamiento esperado. Se observan nodos que no presentan conexiones significativas con el resto del grafo, es decir, nodos aislados. Estos nodos corresponden a elementos que no alcanzan los umbrales de similitud mínimos, lo que puede indicar una ausencia de correspondencia semántica para alguno de los elementos analizados.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figs/grafo/histGenAlucin1.png}
+    \includegraphics[width=0.7\linewidth]{figs/grafo/histGenAlucin2.png}
+    \caption{Ejemplos de historias generadas sin correspondencia semántica.}
+    \label{fig:alucinaciones}
+\end{figure}
+
+El análisis de estos casos permite validar la consistencia del grafo con los resultados previamente discutidos en la sección de detección de alucinaciones. Particularmente, las historias:
+
+\begin{itemize}
+    \item ``As a system administrator, I want to ensure notifications are sent within a reasonable time after triggering events...''
+    \item ``As a system administrator, I want to ensure date validations prevent invalid ranges...''
+\end{itemize}
+
+aparecen como nodos aislados en el grafo, sin conexiones hacia funcionalidades ni historias esperadas. Este comportamiento indica que dichas historias no presentan similitud semántica suficiente con el dominio funcional definido. Esto se corresponde con el análisis de alucinaciones realizado, donde se identificaron estas historias como contenido no alineado con los requerimientos del sistema. En resumen, el grafo confirma que se trata de posibles alucinaciones del modelo, es decir historias generadas que no pueden ser correspondidas a ninguna historia esperada ni funcionalidad definida. :contentReference[oaicite:0]{index=0}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figs/grafo/alucionaciones1.png}
+    \includegraphics[width=0.7\linewidth]{figs/grafo/alucinaciones2.png}
+    \caption{Ejemplos de historias generadas sin correspondencia semántica.}
+    \label{fig:alucinaciones}
+\end{figure}
+
+En la anterior figura se pueden también identificar casos en los que funcionalidades o historias esperadas no presentan conexiones con historias generadas. En estos casos, el grafo evidencia una falta de cobertura del modelo, indicando que ciertos requerimientos del dominio no han sido representados correctamente en la salida generada. 
+
+Además se observan situaciones donde las conexiones existen pero presentan valores de similitud intermedios y se distribuyen entre múltiples nodos, en estos casos no se identifica una correspondencia clara, sino una dispersión de relaciones semánticas.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figs/grafo/reportes.png}
+    \caption{Ejemplo de cobertura parcial con similitudes distribuidas.}
+    \label{fig:ambiguedad}
+\end{figure}
+
+Finalmente, también se identifican casos donde una única historia generada se conecta con múltiples funcionalidades o historias esperadas. Este comportamiento indica una agregación de requerimientos en una sola historia, lo que sugiere que la generación de historias por parte del modelo tiende a agrupar mas de una funcionalidad si las mismas están relacionadas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figs/grafo//facturas.png}
+    \caption{Ejemplo de historia generada con múltiples correspondencias.}
+    \label{fig:epica}
+\end{figure}
+
+En conjunto, el grafo permite identificar tres comportamientos relevantes del modelo: (i) alineación correcta, evidenciada por agrupamientos densos, (ii) cobertura parcial, que se puede identificar por conexiones distribuidas con similitud intermedia, y (iii) ausencia de correspondencia, lo que se logra identificar mediante nodos aislados, estos casos de nodos aislados son además consistentes con el análisis previo, en el que las dos historias catalogadas como alucinación son las mismas que el grafo representó como nodos aislados.
