@@ -961,10 +961,10 @@ Las funcionalidades no cubiertas se observan en aspectos relacionados con las re
 La comparación entre ambos conjuntos evidencia que las historias generadas alcanzan un nivel de cobertura funcional comparable al de las historias esperadas. Las diferencias observadas son mínimas, con una leve mejora en la proporción de funcionalidades completamente cubiertas y una reducción en la cantidad de funcionalidades no cubiertas por parte del conjunto generado.
 Ambos conjuntos comparten un mismo comportamiento, una alta representación de funcionalidades explícitas y una baja cobertura de aspectos implícitos, que se pueden también ver como requisitos no funcionales, particularmente funcionalidades relacionadas con identificadores únicos, control de acceso y reglas de consistencia del sistema no son capturadas de manera directa por ninguno de los dos conjuntos. Se puede concluir que el modelo no introduce mejoras significativas en la cobertura del dominio, sino que produce un tipo de representación similar a la que realizan los analistas humanos, pero tampoco empeora el nivel de cobertura, en ciertos casos dividiendo una funcionalidad en más de una historia pero de todos modos incluyendo la esencia de la misma.
 \subsubsection{Conclusiones}
-Los resultados indican que el modelo es capaz de generar historias de usuario que alcanzan un nivel de cobertura funcional equivalente al de un conjunto elaborado manualmente por analistas human
+Los resultados indican que el modelo es capaz de generar historias de usuario que alcanzan un nivel de cobertura funcional equivalente al de un conjunto elaborado manualmente por analistas humanos.
 
 \subsection{Detección de alucinaciones}
-%(agregar que esto es un agregado, se hace re forma manual)
+%(agregar que esto es un agregado, se hace de forma manual)
 La implementación automática de similitud semántica permitió definir una detección de alucinaciones semi-automática, complementando el análisis manual realizado. El análisis de alucinaciones se realizó sobre el conjunto completo de 23 historias de usuario generadas, evaluando su correspondencia con el dominio funcional definido. La clasificación se basa en el grado de alineación semántica identificado mediante similitud con embeddings, complementado con un análisis manual de cada caso.% donde la idea es detectar automáticamente posibles alucinaciones para agilizar el proceso.
 
 Los resultados obtenidos se presentan en la Tabla \ref{tab:hallucinations}.
@@ -1041,7 +1041,7 @@ Por otro lado, los resultados también muestran limitaciones del uso de SBERT. C
 
 \subsection{Análisis del grafo de similitud semántica}
 
-El grafo de similitud semántica permite analizar la estructura de las relaciones entre historias generadas, historias esperadas y funcionalidades del dominio, esta representación aporta una visión complementaria al análisis basado en valores de similitud., lo que resulta útil para identificar patrones estructurales asociados a alineación, cobertura parcial y ausencia de correspondencias.
+El grafo de similitud semántica permite analizar la estructura de las relaciones entre historias generadas, historias esperadas y funcionalidades del dominio, esta representación aporta una visión complementaria al análisis basado en valores de similitud, lo que resulta útil para identificar patrones estructurales asociados a alineación, cobertura parcial y ausencia de correspondencias.
 
 En general, el grafo presenta múltiples componentes conectados que corresponden a distintos subdominios funcionales (por ejemplo, pacientes, facturación, inventario y reportes). Dentro de estos componentes se observan agrupamientos densos, donde historias generadas, historias esperadas y funcionalidades se conectan mediante valores de similitud elevados, indicando una adecuada alineación semántica del modelo en estos casos.
 
@@ -1069,7 +1069,7 @@ El análisis de estos casos permite validar la consistencia del grafo con los re
     \item ``As a system administrator, I want to ensure date validations prevent invalid ranges...''
 \end{itemize}
 
-aparecen como nodos aislados en el grafo, sin conexiones hacia funcionalidades ni historias esperadas. Este comportamiento indica que dichas historias no presentan similitud semántica suficiente con el dominio funcional definido. Esto se corresponde con el análisis de alucinaciones realizado, donde se identificaron estas historias como contenido no alineado con los requerimientos del sistema. En resumen, el grafo confirma que se trata de posibles alucinaciones del modelo, es decir historias generadas que no pueden ser correspondidas a ninguna historia esperada ni funcionalidad definida. :contentReference[oaicite:0]{index=0}
+aparecen como nodos aislados en el grafo, sin conexiones hacia funcionalidades ni historias esperadas. Este comportamiento indica que dichas historias no presentan similitud semántica suficiente con el dominio funcional definido. Esto se corresponde con el análisis de alucinaciones realizado, donde se identificaron estas historias como contenido no alineado con los requerimientos del sistema. En resumen, el grafo confirma que se trata de posibles alucinaciones del modelo, es decir historias generadas que no pueden ser correspondidas a ninguna historia esperada ni funcionalidad definida.
 
 \begin{figure}[H]
     \centering
@@ -1095,7 +1095,7 @@ Finalmente, también se identifican casos donde una única historia generada se 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{figs/grafo//facturas.png}
+    \includegraphics[width=0.9\linewidth]{figs/grafo/facturas.png}
     \caption{Ejemplo de historia generada con múltiples correspondencias.}
     \label{fig:epica}
 \end{figure}
