@@ -1,11 +1,11 @@
-En este capítulo se presentan los resultados obtenidos a partir de la evaluación de la salida de la herramienta ClickUp, siguiendo la metodología descripta en el capítulo \ref{cap:evaluacion}.
+En este capítulo se presentan los resultados obtenidos a partir de la evaluación de la salida de la herramienta ClickUp, siguiendo la metodología descrita en el Capítulo \ref{cap:evaluacion}.
 
 \section{Salida de la herramienta ClickUp}
-La salida de la herramienta sigue el formato indicado en el prompt \ref{fig:prompt_simple} y consta de historias de usuario, donde cada una incluye criterios de aceptación, referencia al documento e indicación de si es una épica, además de una sección final titulada Inconsistencies, Ambiguities, or Contradictions (Inconsistencias, ambigüedades o contradicciones). 
+La salida de la herramienta sigue el formato indicado en el prompt, Figura \ref{fig:prompt_simple}, y consta de historias de usuario, donde cada una incluye criterios de aceptación, referencia al documento e indicación de si es una épica, además de una sección final titulada Inconsistencies, Ambiguities, or Contradictions (Inconsistencias, ambigüedades o contradicciones). 
 
-Las historias generadas se presentan en la tabla \ref{tab:historias_clickup}, junto a sus criterios de aceptación en la tabla \ref{tab:criterios_clickup}, las referencias al documento de requisitos en la tabla \ref{tab:referencias_clickup} e indicación de si es una épica en la tabla \ref{tab:epicas_clickup}.
+Las historias generadas se presentan en la Tabla \ref{tab:historias_clickup}, junto a sus criterios de aceptación en la Tabla \ref{tab:criterios_clickup}, las referencias al documento de requisitos en la Tabla \ref{tab:referencias_clickup} e indicación de si es una épica en la Tabla \ref{tab:epicas_clickup}.
 
-Las inconsistencias, ambigüedades o contradicciones detectadas en el documento se presentan en la tabla \ref{tab:inconsistencias_clickup}.
+Las inconsistencias, ambigüedades o contradicciones detectadas en el documento se presentan en la Tabla \ref{tab:inconsistencias_clickup}.
 
 \begin{longtable}{|c|p{12cm}|}
 \caption{Historias Generadas por ClickUp} \label{tab:historias_clickup} \\
@@ -339,7 +339,7 @@ A3 & Ambigüedad & Notification timing (“within a reasonable time”) in secti
 
 
 \section{Detección de Inconsistencias}
-La tabla \ref{tab:eval_inconsistencias_clickup} muestra el análisis de correctitud de las inconsistencias detectadas por la herramienta en el documento de requisitos.
+La Tabla \ref{tab:eval_inconsistencias_clickup} muestra el análisis de correctitud de las inconsistencias detectadas por la herramienta en el documento de requisitos.
 
 \begin{longtable}{|c|c|}
 \caption{Evaluación de inconsistencias detectadas por ClickUp} 
@@ -372,7 +372,7 @@ Las tres ambigüedades detectadas por la herramienta son correctas. La ambigüed
 
 \section{Detección de alucinaciones}
 
-En la tabla \ref{tab:alucinaciones}, se muestra la detección de alucinaciones para cada historia.
+En la Tabla \ref{tab:alucinaciones}, se muestra la detección de alucinaciones para cada historia.
 
 \begin{longtable}{|l|p{2cm}|p{2cm}|p{2cm}|l|}
 \caption{Detección de alucinaciones en resultado de ClickUp con respecto al documento de requisitos}
@@ -438,7 +438,7 @@ La evaluación según el QUSF se dividió en tablas según la dimensión analiza
 
 \subsection{Criterios Semánticos}
 
-La tabla \ref{table:sem1} presenta la evaluación semántica individual de cada historia de usuario.
+La Tabla \ref{table:sem1} presenta la evaluación semántica individual de cada historia de usuario.
 
 \begin{longtable}{|l|p{2.5cm}|p{3cm}|p{2.5cm}|p{2.5cm}|}
 \caption{Evaluación semántica de historias de usuario según QUSF}
@@ -509,7 +509,7 @@ El * en HU7 y HU9 indica que quizás haya un conflicto entre ambas historias, ya
 
 \subsection{Criterios Sintácticos}
 
-La tabla \ref{table:sin} muestra los resultados de la evaluación sintáctica de cada historia.
+La Tabla \ref{table:sin} muestra los resultados de la evaluación sintáctica de cada historia.
 
 \begin{longtable}{|c|p{2.5cm}|p{2cm}|p{2cm}|}
 \caption{Evaluación sintáctica de historias de usuario según QUSF}
@@ -559,7 +559,7 @@ Al correr la automatización de aqusa-core, el algoritmo solamente encontró el 
 
 \subsection{Criterios Pragmáticos}
 
-En la tabla \ref{table:prag} se muestra el resultado de la evaluación pragmática de las historias.
+En la Tabla \ref{table:prag} se muestra el resultado de la evaluación pragmática de las historias.
 
 \begin{longtable}{|l|p{2.7cm}|p{2cm}|p{2cm}|p{2.25cm}|}
 \caption{Evaluación pragmática de historias de usuario según QUSF}
@@ -612,7 +612,7 @@ El * en el aspecto Única de HU4 indica que la historia podría no ser única si
 
 Para el aspecto Independiente, en QUSF se define la dependencia de Causality, es decir que una historia necesita ser completada primero que otra. Se marca como No para el caso de Causality, indicando las historias de las que depende.
 
-La tabla \ref{table:prag2} finaliza la evaluación del conjunto de historias de usuario, indicando si es completo y uniforme.
+La Tabla \ref{table:prag2} finaliza la evaluación del conjunto de historias de usuario, indicando si es completo y uniforme.
 
 \begin{table}[h!]
 \centering
@@ -637,7 +637,7 @@ En la dimensión pragmática, considerando únicamente las 21 historias no clasi
 
 \section{INVEST}
 
-La tabla \ref{table:invest} muestra la evaluación de INVEST de cada historia de usuario, utilizando la escala del 1 al 5 para cada criterio y si se considera como épica.
+La Tabla \ref{table:invest} muestra la evaluación de INVEST de cada historia de usuario, utilizando la escala del 1 al 5 para cada criterio y si se considera como épica.
 
 \begin{longtable} {|c|c|c|c|c|c|c|c|}
 \caption{INVEST para cada historia}
@@ -746,10 +746,10 @@ Considerando únicamente las 21 historias no clasificadas como alucinaciones, el
 En conjunto, las historias generadas transmiten correctamente el valor y la intención de cada funcionalidad, pero deben ser refinadas y divididas para ser utilizadas por el equipo de desarrollo y el cliente.
 
 \subsection{Discusión sobre resultado obtenido de Épicas}
-La herramienta clasificó la totalidad de las historias generadas como no épicas, como se puede observar en la tabla \ref{tab:epicas_clickup}. Sin embargo, la evaluación realizada por los analistas identificó que la mayoría deberían ser consideradas épicas. Esta diferencia sugiere que la herramienta no es capaz de detectar cuando una historia agrupa demasiadas funcionalidades.
+La herramienta clasificó la totalidad de las historias generadas como no épicas, como se puede observar en la Tabla \ref{tab:epicas_clickup}. Sin embargo, la evaluación realizada por los analistas identificó que la mayoría deberían ser consideradas épicas. Esta diferencia sugiere que la herramienta no es capaz de detectar cuando una historia agrupa demasiadas funcionalidades.
 
 \section{Trazabilidad}
-La tabla \ref{tab:trazabilidad_clickup} muestra la evaluación de la trazabilidad a partir de la referencia presente en la historia.
+La Tabla \ref{tab:trazabilidad_clickup} muestra la evaluación de la trazabilidad a partir de la referencia presente en la historia.
 
 \begin{longtable}{|c|c|}
 \caption{Evaluación de trazabilidad de ClickUp} 
@@ -819,7 +819,7 @@ R23 & Sí \\
 Las referencias a las secciones del documento son correctas, lo que indica que la herramienta logra mantener la trazabilidad con el documento de entrada.
 
 \section{Similitud Semántica}
-Siguiendo la metodología descripta en el capítulo \ref{cap:evaluacion}, el proceso de evaluación compara el conjunto de 23 historias de usuario generadas por ClickUp, tabla \ref{tab:historias_clickup}, contra el conjunto de 57 historias de usuario esperadas elaboradas por nosotros, tabla \ref{tab:historias_esperadas}. Adicionalmente se generó automáticamente un conjunto de funcionalidades del dominio a partir del documento de requisitos del producto (PDR) que posteriormente fue refinado, siendo el conjunto final de 54 funcionalidades que permiten evaluar la cobertura funcional de ambas soluciones, tabla \ref{tab:funcionalidades}.
+Siguiendo la metodología descrita en el Capítulo \ref{cap:evaluacion}, el proceso de evaluación compara el conjunto de 23 historias de usuario generadas por ClickUp, tabla \ref{tab:historias_clickup}, contra el conjunto de 57 historias de usuario esperadas elaboradas por nosotros, tabla \ref{tab:historias_esperadas}. Adicionalmente se generó automáticamente un conjunto de funcionalidades del dominio a partir del documento de requisitos del producto (PDR) que posteriormente fue refinado, siendo el conjunto final de 54 funcionalidades que permiten evaluar la cobertura funcional de ambas soluciones, tabla \ref{tab:funcionalidades}.
 
 % El análisis se estructura en tres dimensiones principales:
 % \begin{itemize}
@@ -831,8 +831,8 @@ Siguiendo la metodología descripta en el capítulo \ref{cap:evaluacion}, el pro
 % \end{itemize}
 
 \subsection{Alineación semántica entre historias generadas y esperadas}
-La alineación semántica entre historias generadas e historias esperadas se muestra en la tabla \ref{tab:alignment_histories}.
-Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0.7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
+La alineación semántica entre historias generadas e historias esperadas se muestra en la Tabla \ref{tab:alignment_histories}.
+Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la Tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0.7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
 
 \begin{table}[h]
 \centering
@@ -842,14 +842,14 @@ Los resultados de alineación indican que el modelo logra capturar en gran medid
 \hline
 Alineadas (> 0.8)   & 13  & 57\%  \\
 Posible alineamiento (> 0.6) & 8 & 35\% \\
-Ausente (< 0.6) & 2 & 55\% \\
+Ausente (< 0.6) & 2 & 9\% \\
 \hline
 \end{tabular}
 \caption{Porcentaje de similitud semántica de las historias de usuario generadas}
 \label{tab:hu_estados}
 \end{table}
 
-Se observa además que en algunos casos una única historia generada presenta alta similitud con múltiples historias esperadas. Esto muestra una diferencia en la granularidad a la hora de redactar las historias: el modelo tiende a agrupar múltiples funcionalidades en una sola descripción, a diferencia del conjunto esperado que presenta una descomposición más detallada. En la tabla \ref{tab:granularity_example} se muestra un ejemplo que representa esta situación.
+Se observa además que en algunos casos una única historia generada presenta alta similitud con múltiples historias esperadas. Esto muestra una diferencia en la granularidad a la hora de redactar las historias: el modelo tiende a agrupar múltiples funcionalidades en una sola descripción, a diferencia del conjunto esperado que presenta una descomposición más detallada. En la Tabla \ref{tab:granularity_example} se muestra un ejemplo que representa esta situación.
 
 \begin{longtable}{|c|c|c|}
 \caption{Ejemplo de correspondencia múltiple}
@@ -877,7 +877,7 @@ En este caso, el modelo asigna la mayor similitud a una historia relacionada con
 Este comportamiento se explica porque ambas historias comparten términos similares como register, patient y clinical record, lo que incrementa la similitud léxica. Sin embargo, difieren en aspectos clave como el tipo de información registrada (antecedentes médicos vs. evolución clínica) y el actor que realiza la acción (personal administrativo vs. médico), dimensiones que no son completamente capturadas por el modelo de embeddings.
 Esta situación refuerza la utilidad del ranking de coincidencias definido en la metodología, ya que permite al analista humano revisar manualmente los casos en los que la mejor correspondencia funcional no coincide con el primer resultado del ranking. En el ejemplo presentado, resulta evidente que la correspondencia más adecuada es la segunda historia esperada.
 Por otro lado, los casos de baja similitud corresponden principalmente a dos situaciones: (i) historias que no tienen una correspondencia directa en el conjunto esperado, y (ii) historias que representan restricciones del sistema o requisitos no funcionales expresados como historias de usuario.
-La tabla \ref{tab:low_similarity_example} muestra un ejemplo de esto para la historia generada HU22.
+La Tabla \ref{tab:low_similarity_example} muestra un ejemplo de esto para la historia generada HU22.
 
 \begin{table}[h!]
 \centering
@@ -906,9 +906,9 @@ Los resultados de alineación, si bien son relevantes y evidencian parte de la c
 
 \subsection{Análisis de similitud semántica de criterios de aceptación entre historias alineadas}
 Luego de obtener la alineación semántica de las historias generadas con las historias esperadas, se obtuvo la alineación de los criterios de aceptación generados con los criterios de aceptación esperados. Para las historias generadas que no tienen una historia esperada alineada, no se realizó esta comparación.
-En la tabla \ref{tab:alignment_criteria} se muestra la similitud semántica para todos los criterios de aceptación generados con las referencias correspondientes.
+En la Tabla \ref{tab:alignment_criteria} se muestra la similitud semántica para todos los criterios de aceptación generados con las referencias correspondientes.
 
-En resumen, de los 31 criterios de aceptación esperados, la mayoría no obtuvo alineación con los criterios de aceptación esperados. Solamente 3 criterios son similares a los esperados y 14 presentan una similitud semántica baja. Los porcentajes se muestran en la tabla \ref{tab:ca_estados}
+En resumen, de los 31 criterios de aceptación esperados, la mayoría no obtuvo alineación con los criterios de aceptación esperados. Solamente 3 criterios son similares a los esperados y 14 presentan una similitud semántica baja. Los porcentajes se muestran en la Tabla \ref{tab:ca_estados}
 
 \begin{table}[h]
 \centering
@@ -931,7 +931,7 @@ Se encontró una baja alineación entre los criterios de aceptación generados y
 En esta sección se presentan los resultados de cobertura obtenidos al aplicar el análisis definido en el Capítulo \ref{cap:evaluacion} sobre los conjuntos de historias esperadas y generadas. El análisis se basa en el grado de correspondencia semántica entre las funcionalidades del dominio y las historias de usuario.
 
 \subsubsection{Resultados}
-La tabla \ref{tab:cobertura_funcional} muestra los porcentajes de cobertura del dominio funcional.
+La Tabla \ref{tab:cobertura_funcional} muestra los porcentajes de cobertura del dominio funcional.
 
 \begin{table}[h!]
 \centering
@@ -948,7 +948,7 @@ No cubierta & 12 (22.2\%) & 13 (24.1\%) \\
 \label{tab:cobertura_funcional}
 \end{table}
 
-El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en la tabla \ref{tab:funcionalidades_historias_esperadas} y tabla \ref{tab:funcionalidades_historias_generadas} para las historias esperadas y las historias generadas respectivamente.
+El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en la Tabla \ref{tab:funcionalidades_historias_esperadas} y tabla \ref{tab:funcionalidades_historias_generadas} para las historias esperadas y las historias generadas respectivamente.
 
 Los resultados muestran que ambos conjuntos presentan una distribución de cobertura altamente similar. En ambos casos, aproximadamente la mitad de las funcionalidades se encuentran parcialmente cubiertas, mientras que alrededor de un tercio presenta cobertura completa.
 Las funcionalidades completamente cubiertas se corresponden principalmente con acciones explícitas, tales como el registro, consulta y modificación de información. En estos casos se observan valores de similitud elevados y correspondencias directas entre funcionalidades e historias.
