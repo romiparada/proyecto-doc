@@ -8,7 +8,7 @@ ScopeMaster \cite{scopemaster} menciona en su página que puede ser utilizado pa
 Tiene una integración con Jira gratuita, llamada StoryAnalizer \cite{storyanalizer}
 enfocada en analizar historias de usuario para la mejora, pero no clarifica la generación automática de ellas. Por lo que es filtrada.
 
-RequirementLinter, es una herramienta para el análisis de historias de usuario o requerimientos \cite{requirementlinter}. No se centra en la generación de historias si no que es una herramienta para identificar la calidad de las historias. Esta herramienta es filtrada ya que no cumple.
+RequirementLinter, es una herramienta para el análisis de historias de usuario o requerimientos \cite{requirementlinter}. Se centra en identificar la calidad de las historias, no en su generación. Esta herramienta es filtrada ya que no cumple.
 
 POPal, AI Test Case \& User Story Generator for Jira \cite{popal},  en su página tiene un video explicativo donde muestra que se puede generar historias de usuario a partir de épicas, por lo que pasa el filtrado. Y tiene prueba gratuita por lo que puede ser probada en el análisis.
 
@@ -34,7 +34,7 @@ Modern Requirements4DevOps \cite{modernreq1} menciona en su página \cite{modern
 
 Ambiguity Detection Using LLMs (ChaseMc-Clellan) \cite{ambiguitydect}, no presenta archivo de codigo para generación de historias de usuario. Similar RE-Ambiguity-Detection-Experiment (+OpenReq) \cite{reambiguity} descartado dado que es un experimento de detección de ambigüedad no generación de historias de usuario.
 
-Reqnroll \cite{reqnroll} fue filtrada ya que no menciona la generación de historias de usuario, si no que consiste en una herramienta de pruebas.
+Reqnroll \cite{reqnroll} fue filtrada ya que no menciona la generación de historias de usuario, ya que consiste en una herramienta de pruebas.
 % las primeras 5 de Valentin probado por Romina
 
 Quality Modeller - Curiosity Software \cite{qualityModeller} queda filtrada, ya que aunque la herramienta ofrece soporte para la automatización de pruebas y permite la importación de requisitos, no genera historias de usuario con criterios de aceptación en formato ágil.
@@ -124,12 +124,12 @@ StoryCraft & \textbf{Incluida}, menciona en su repositorio sobre generación & 1
 StoryTest (by ScopeMaster) & Filtrada, prueba no disponible e incluida en otra herramienta & 16/11/2025 \\
 Visual Narrator & Filtrada, herramienta para visualizar historias & 16/11/2025 \\
 Featmap & Filtrada, repositorio archivado & 16/11/2025 \\
-USeR (User Story eReviewer) & Filtrada, implementación no disponible y academico  & 16/11/2025 \\
+USeR (User Story eReviewer) & Filtrada, implementación no disponible y académico  & 16/11/2025 \\
 reqSuite RM & Filtrada, no se enfoca en la generación de historias & 16/11/2025 \\
 AQUSA (Automatic Quality User Story Artisan) & Filtrada, calidad de historias no generación & 16/11/2025 \\
 Modern Requirements4DevOps & \textbf{Incluida}, contiene Copilot4DevOps & 18/11/2025 \\
 Copilot4DevOps & \textbf{Incluida}, genera historias de usuario con IA & 18/11/2025 \\
-Ambiguity Detection Using LLMs (ChaseMcClellan) & Filtrada, el archivo sobre generación de historias de usuario esta vacio & 18/11/2025 \\
+Ambiguity Detection Using LLMs (ChaseMcClellan) & Filtrada, el archivo sobre generación de historias de usuario está vacío & 18/11/2025 \\
 RE-Ambiguity-Detection-Experiment (+ OpenReq) & Filtrada, experimento sobre ambigüedad & 18/11/2025 \\
 Reqnroll & Filtrada, se utiliza para pruebas & 18/11/2025  \\
 Curiosity Software - Quality Modeller & Filtrada, ofrece automatización de pruebas y soporte de requisitos, pero no genera historias de usuario de manera automática & 18/11/2025 \\
@@ -216,7 +216,7 @@ Dadas las herramientas que pasaron el primer filtro, el siguiente paso es probar
 
 En primera instancia fue posible descartar todas las herramientas que no se pudieron probar; Beam AI User Stories no fue posible contactarse para conseguir acceso a la plataforma. AI Agile Story/Bug Generation da error al intentar instalarla y AutoStory: AI-Powered Ticket Creation for Jira está desactualizada y no es posible probarla.
 
-Para las herramientas que si se obtuvo acceso se utilizó un documento técnico que contiene requisitos técnicos que permiten generar historias de usuario e incluye una inconsistencia que la herramienta podría detectar. Junto al documento también se utilizó, para las herramientas que lo requieran, un prompt simple que instruye al asistente a generar las historias, incluir criterios de aceptación, referencias al documento y conflictos.
+Para las herramientas que sí se obtuvo acceso se utilizó un documento técnico que contiene requisitos técnicos que permiten generar historias de usuario e incluye una inconsistencia que la herramienta podría detectar. Junto al documento también se utilizó, para las herramientas que lo requieran, un prompt simple que instruye al asistente a generar las historias, incluir criterios de aceptación, referencias al documento y conflictos.
 
 \begin{verbatim}
     Analizar el documento adjunto/texto y generar historias
@@ -235,7 +235,7 @@ Este enfoque permite mantener comparabilidad entre herramientas con interfaces y
 En una segunda etapa se empleó un prompt completo alineado con la metodología del proyecto (incluyendo salida estructurada e indicadores INVEST), con el objetivo de evaluar el desempeño de las herramientas bajo un escenario de mayor guía y exigencia, y analizar su sensibilidad al nivel de detalle del prompting.
 
 
-De esta manera se comprobaran los requisitos: Generación de Historias con IA, Es automática (no requiere prompt), Inclusión de criterios de aceptación, Detección de inconsistencias, Permite Validar/Refinar las Historias, Trazabilidad.
+De esta manera se comprobarán los requisitos: Generación de Historias con IA, Es automática (no requiere prompt), Inclusión de criterios de aceptación, Detección de inconsistencias, Permite Validar/Refinar las Historias, Trazabilidad.
 
 POPal --- AI Test Case \& User Story Generator for Jira permite generar las historias, de manera automática sin requerir prompt e incluye criterios de aceptación. Además de permitir validar los resultados. Por lo tanto es incluida.
 
@@ -258,7 +258,7 @@ Agile-bot fue filtrada, ya que no está orientada a historias de usuario sino a 
 
 AutoDev Editor fue incluida ya que genera historias de usuario. Tiene para elegir varios modelos para la generación pero solo funciona uno, y no se mantiene consistente en la generación cuando se refinan las historias, no funciona bien. Por lo que no se puede refinar historias generadas, tampoco detectó las inconsistencias ni contiene trazabilidad.
 
-Specifai fue incluida ya que genera en base a un título y una mínima descripción opcional, luego permite agregar requisitos en formato texto. Se puede iterar sobre lo generado, según la vista previa de la aplicacion contiene un chat, pero no fue posible encontrarlo y utilizarlo en la prueba.
+Specifai fue incluida ya que genera en base a un título y una mínima descripción opcional, luego permite agregar requisitos en formato texto. Se puede iterar sobre lo generado, según la vista previa de la aplicación contiene un chat, pero no fue posible encontrarlo y utilizarlo en la prueba.
 
 StoryBot fue filtrada ya que no fue posible la generación de las historias correctamente. % Keiver podrias ayudarme con la explicacion? No me queda claro
 
@@ -313,7 +313,7 @@ AutoStory: AI-Powered Ticket Creation for Jira & \textbf{Filtrada}, no se pudo p
 \label{table:filtrados3}
 \end{center}
 
-En la tabla \ref{tab:incluidasfiltrado2} se lista para todas las herramientas incluidas junto a los requisitos que cumplen.
+En la Tabla \ref{tab:incluidasfiltrado2} se lista para todas las herramientas incluidas junto a los requisitos que cumplen.
 
 \begin{longtable}{|p{2.5cm}|p{1.9cm}|p{1.2cm}|p{1.9cm}|p{2cm}|p{1.2cm}|p{2cm}|}
 \caption{Herramientas incluidas luego del segundo filtrado} 
