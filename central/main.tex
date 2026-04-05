@@ -6,7 +6,7 @@
 
 En esta sección se describen los pasos que llevamos luego de la revisión de antecedentes y obtención del ranking de herramientas.
 
-Como primer paso nos enfocamos en realizar una prueba piloto con la herramienta ClickUp, que luego derivó en ajustes tanto del documento de entrada, como la construcción de una solución esperada y su traducción al inglés. Y finalmente la decisión de evaluar solamente la generación de historias producidas por esta herramienta.
+Como primer paso nos enfocamos en realizar una prueba piloto con la herramienta ClickUp, que luego derivó en ajustes tanto del documento de entrada, como la construcción de una solución esperada y su traducción al inglés. Finalmente, la decisión de evaluar solamente la generación de historias producidas por esta herramienta.
 
 \input{central/prueba piloto - ClickUp}
 
@@ -42,12 +42,12 @@ Luego de la prueba piloto, surgieron dudas sobre cómo corroborar la completitud
 
 Las historias fueron revisadas y pasaron por un proceso de reescritura al detectar detalles faltantes o posibles épicas que fueron divididas. De esta manera, construimos una solución esperada lo más completa posible para la comparación.
 
-La versión final de las historias esperadas se encuentra en la tabla \ref{tab:historias_esperadas} y sus criterios en la tabla \ref{tab:criterios_esperados}.
+La versión final de las historias esperadas se encuentra en la Tabla \ref{tab:historias_esperadas} y sus criterios en la Tabla \ref{tab:criterios_esperados}.
 
 \section{Traducción al Inglés}
 El documento de requisitos, las historias esperadas y los prompts fueron redactados en español. Sin embargo, se decidió crear una versión en inglés, dado que los modelos reciben un mayor entrenamiento en inglés \cite{zhang2023multilingualLLM} y suelen tener mejores resultados. En primer lugar se tradujo el documento de requisitos, con ayuda de ChatGPT, definiendo así un vocabulario, para luego traducir las historias esperadas de manera consistente.
 
-El prompt fue traducido al inglés y se muestra en la figura \ref{fig:prompt_simple}.
+El prompt fue traducido al inglés y se muestra en la Figura \ref{fig:prompt_simple}.
 
 \begin{figure}[h!]
 \begin{verbatim}
@@ -124,7 +124,7 @@ No \\
 \hline
 \end{longtable}
 
-Para el caso de uso de generación de documentos utilizando inteligencia artificial, el artículo define como se mide cada aspecto de calidad, ejemplificado en la Tabla \ref{table:aritculo-eval2} extraída también del artículo. Este caso de uso se aproxima a la generación automática de historias de usuario, ya que el texto es generado por la inteligencia artificial a partir de un documento.
+Para el caso de uso de generación de documentos utilizando inteligencia artificial, el artículo define cómo se mide cada aspecto de calidad, ejemplificado en la Tabla \ref{table:aritculo-eval2} extraída también del artículo. Este caso de uso se aproxima a la generación automática de historias de usuario, ya que el texto es generado por la inteligencia artificial a partir de un documento.
 
 \newpage
 \begin{longtable}{|p{3cm}| p{4cm} |p{4cm}|}
