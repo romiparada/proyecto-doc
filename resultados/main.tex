@@ -834,15 +834,15 @@ Siguiendo la metodología descrita en el Capítulo \ref{cap:evaluacion}, el proc
 La alineación semántica entre historias generadas e historias esperadas se muestra en la Tabla \ref{tab:alignment_histories}.
 Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la Tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0.7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
 
-\begin{table}[h]
+\begin{table}[htb]
 \centering
 \begin{tabular}{|l|c|c|}
 \hline
 \textbf{Similitud Semántica} & \textbf{Número de Historias Generadas} & \textbf{Porcentaje} \\
 \hline
-Alineadas (> 0.8)   & 13  & 57\%  \\
-Posible alineamiento (> 0.6) & 8 & 35\% \\
-Ausente (< 0.6) & 2 & 9\% \\
+Alineadas (>= 0.75)   & 13  & 57\%  \\
+Posible alineamiento (>= 0.6) & 8 & 35\% \\
+Ausente (< 0.6) & 2 & 8\% \\
 \hline
 \end{tabular}
 \caption{Porcentaje de similitud semántica de las historias de usuario generadas}
@@ -910,14 +910,14 @@ En la Tabla \ref{tab:alignment_criteria} se muestra la similitud semántica para
 
 En resumen, de los 31 criterios de aceptación esperados, la mayoría no obtuvo alineación con los criterios de aceptación esperados. Solamente 3 criterios son similares a los esperados y 14 presentan una similitud semántica baja. Los porcentajes se muestran en la Tabla \ref{tab:ca_estados}
 
-\begin{table}[h]
+\begin{table}[htb]
 \centering
 \begin{tabular}{|l|c|c|}
 \hline
 \textbf{Similitud Semántica} & \textbf{Criterios Generados} & \textbf{Porcentaje} \\
 \hline
-Alineadas  (> 0.8) & 3  & 10\%  \\
-Posible alineamiento (> 0.6) & 11 & 35\% \\
+Alineadas  (>= 0.75) & 3  & 10\%  \\
+Posible alineamiento (>= 0.6) & 11 & 35\% \\
 Ausente (< 0.6)& 17 & 55\% \\
 \hline
 \end{tabular}
@@ -948,7 +948,7 @@ No cubierta & 12 (22.2\%) & 13 (24.1\%) \\
 \label{tab:cobertura_funcional}
 \end{table}
 
-El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en la Tabla \ref{tab:funcionalidades_historias_esperadas} y tabla \ref{tab:funcionalidades_historias_generadas} para las historias esperadas y las historias generadas respectivamente.
+El detalle completo de la evaluación por funcionalidad, incluyendo las correspondencias semánticas y los valores de similitud, se presenta en la Tabla \ref{tab:fun_historias_esperadas} y Tabla \ref{tab:fun_historias_generadas} para las historias esperadas y las historias generadas respectivamente.
 
 Los resultados muestran que ambos conjuntos presentan una distribución de cobertura altamente similar. En ambos casos, aproximadamente la mitad de las funcionalidades se encuentran parcialmente cubiertas, mientras que alrededor de un tercio presenta cobertura completa.
 Las funcionalidades completamente cubiertas se corresponden principalmente con acciones explícitas, tales como el registro, consulta y modificación de información. En estos casos se observan valores de similitud elevados y correspondencias directas entre funcionalidades e historias.
@@ -1035,7 +1035,7 @@ En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de a
 % Este
 
 \subsubsection{Discusión sobre Similitud Semántica}
-Los resultados de la evaluación semántica son consistentes con las conclusiones de la evaluación manual en varios puntos concretos. La baja correspondencia en criterios de aceptación (10\% alineados) se corresponde con la baja estimabilidad encontrada en QUSF (42,9\%) e INVEST (9,5\%). La alta alineación de historias (92\% con al menos posible alineamiento) es coherente con lo observado en QUSF, donde la mayoría de las historias son conceptualmente sólidas y orientadas al problema, y en INVEST, donde el 95,2\% se consideran negociables y valiosas. Por último, la detección de alucinaciones por similitud semántica identificó las mismas dos historias (HU22 y HU23) que el análisis manual. Esta consistencia entre ambos enfoques sugiere que la evaluación automática puede funcionar como un primer filtro antes de la revisión manual, ayudando a identificar los casos que necesitan más atención.
+Los resultados de la evaluación semántica son consistentes con las conclusiones de la evaluación manual en varios puntos concretos. La baja correspondencia en criterios de aceptación (10\% alineados) se corresponde con la baja estimabilidad encontrada en QUSF (42,9\%) e INVEST (9,5\%). La alta alineación de historias (91.3\% con al menos posible alineamiento) es coherente con lo observado en QUSF, donde la mayoría de las historias son conceptualmente sólidas y orientadas al problema, y en INVEST, donde el 95,2\% se consideran negociables y valiosas. Por último, la detección de alucinaciones por similitud semántica identificó las mismas dos historias (HU22 y HU23) que el análisis manual. Esta consistencia entre ambos enfoques sugiere que la evaluación automática puede funcionar como un primer filtro antes de la revisión manual, ayudando a identificar los casos que necesitan más atención.
 
 Por otro lado, los resultados también muestran limitaciones del uso de SBERT. Como se observó en los casos de alineación incorrecta, textos que comparten vocabulario pueden obtener valores de similitud altos a pesar de referirse a funcionalidades distintas, mientras que diferencias como quién realiza una acción o el nivel de detalle de una historia no son capturadas por el modelo. Esto debe tenerse en cuenta a la hora de interpretar los valores de similitud obtenidos.
 
@@ -1059,7 +1059,7 @@ Sin embargo, el principal valor del grafo es la identificación de posibles inco
     \includegraphics[width=0.7\linewidth]{figs/grafo/histGenAlucin1.png}
     \includegraphics[width=0.7\linewidth]{figs/grafo/histGenAlucin2.png}
     \caption{Ejemplos de historias generadas sin correspondencia semántica.}
-    \label{fig:alucinaciones}
+    \label{fig:alucinaciones1}
 \end{figure}
 
 El análisis de estos casos permite validar la consistencia del grafo con los resultados previamente discutidos en la sección de detección de alucinaciones. Particularmente, las historias:
@@ -1076,7 +1076,7 @@ aparecen como nodos aislados en el grafo, sin conexiones hacia funcionalidades n
     \includegraphics[width=0.7\linewidth]{figs/grafo/alucionaciones1.png}
     \includegraphics[width=0.7\linewidth]{figs/grafo/alucinaciones2.png}
     \caption{Ejemplos de historias generadas sin correspondencia semántica.}
-    \label{fig:alucinaciones}
+    \label{fig:alucinaciones2}
 \end{figure}
 
 En la figura anterior también se pueden identificar casos en los que funcionalidades o historias esperadas no presentan conexiones con historias generadas. En estos casos, el grafo evidencia una falta de cobertura del modelo, indicando que ciertos requerimientos del dominio no han sido representados correctamente en la salida generada. 
