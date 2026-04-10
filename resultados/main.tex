@@ -430,7 +430,7 @@ Las historias HU22 y HU23 son consideradas como alucinaciones, ya que no es cohe
 \[\# Historias_{Alucinaciones} = 2 \]
 
 \subsection{Discusión sobre resultado obtenido en la detección de alucinaciones}
-No podemos afirmar que la solución generada está libre de alucinaciones. Se encontraron 2 historias de usuario clasificadas como alucinaciones, lo que representa un 8.7\% del total. En ambos casos, las historias expresan funcionalidades automatizadas por el sistema asignadas a un actor incoherente, aunque los requerimientos sí están presentes en el documento de requisitos y su contenido se mantiene dentro del dominio definido. Un analista podría corregirlas fácilmente reemplazando el actor específico por el sistema como sujeto. De no realizarse esta corrección, podrían derivar en decisiones de implementación incorrectas, como la construcción de un rol de usuario que nunca llegaría a utilizarse.
+No podemos afirmar que la solución generada está libre de alucinaciones. Se encontraron 2 historias de usuario clasificadas como alucinaciones, lo que representa un 8,7\% del total. En ambos casos, las historias expresan funcionalidades automatizadas por el sistema asignadas a un actor incoherente, aunque los requerimientos sí están presentes en el documento de requisitos y su contenido se mantiene dentro del dominio definido. Un analista podría corregirlas fácilmente reemplazando el actor específico por el sistema como sujeto. De no realizarse esta corrección, podrían derivar en decisiones de implementación incorrectas, como la construcción de un rol de usuario que nunca llegaría a utilizarse.
 
 \section{Quality User Story Framework}
 
@@ -629,11 +629,11 @@ Si* & Si \\\hline
 El * en el aspecto Completo indica que el conjunto fue considerado completo respecto a las funcionalidades explícitas del documento de requisitos. Sin embargo, durante la construcción de la solución esperada se identificaron funcionalidades implícitas no cubiertas por ninguna de las dos soluciones, como el acceso al sistema, que incluiría la autenticación de usuarios, habitual en este tipo de sistemas.
 
 \subsection{Discusión sobre resultado obtenido en QUSF}
-En la dimensión semántica, la mayoría de las historias, con excepción de las historias alucinadas, cumplen con ser conceptualmente sólidas y estar orientadas al problema, lo que indica que el contenido generado es coherente. El aspecto más problemático es la ambigüedad, presente en la mayoría de las historias, un 56.5\% del total, aunque en algunos casos es heredada directamente del documento de requisitos y no puede atribuirse exclusivamente a la herramienta. No se detectaron conflictos directos entre historias, lo que refuerza la consistencia interna del conjunto generado. Por lo que las historias de usuario generadas son coherentes en sí mismas y con respecto al conjunto.
+En la dimensión semántica, la mayoría de las historias, con excepción de las historias alucinadas, cumplen con ser conceptualmente sólidas y estar orientadas al problema, lo que indica que el contenido generado es coherente. El aspecto más problemático es la ambigüedad, presente en la mayoría de las historias, un 56,5\% del total, aunque en algunos casos es heredada directamente del documento de requisitos y no puede atribuirse exclusivamente a la herramienta. No se detectaron conflictos directos entre historias, lo que refuerza la consistencia interna del conjunto generado. Por lo que las historias de usuario generadas son coherentes en sí mismas y con respecto al conjunto.
 
 En la dimensión sintáctica, las historias están bien formadas y siguen una plantilla común de forma consistente. Sin embargo, se encontraron conjunciones en cuatro de ellas, un 17\% del total, que requerirían refinamiento y una separación de las funcionalidades conjuntas en diferentes historias. Por lo que las historias de usuario generadas están bien redactadas en sí mismas y con respecto al conjunto.
 
-En la dimensión pragmática, considerando únicamente las 21 historias no clasificadas como alucinaciones, la totalidad constituyen oraciones completas y el 90.5\% son únicas, siendo HU7 y HU9 las únicas con superposición entre sí. En cuanto a la estimabilidad, solo el 42.9\% de las historias fue considerado estimable, lo que indica que varias agrupan demasiadas funcionalidades como para poder planificar su desarrollo con precisión. Respecto a la independencia, únicamente el 23.8\% de las historias fue considerado independiente, aunque las dependencias encontradas son esperables en el desarrollo de un sistema donde algunas funcionalidades deben completarse antes que otras. Para mejorar este aspecto, se podría agregar al prompt una indicación para que la herramienta marque las dependencias entre historias, o vincularlas manualmente por parte del analista o mediante el uso del agente. Por lo que las historias generadas pueden ser utilizadas como base, pero requieren una revisión previa para reducir ambigüedades, subdividir aquellas que agrupan más de una funcionalidad y aclarar el orden de desarrollo para el equipo.
+En la dimensión pragmática, considerando únicamente las 21 historias no clasificadas como alucinaciones, la totalidad constituyen oraciones completas y el 90,5\% son únicas, siendo HU7 y HU9 las únicas con superposición entre sí. En cuanto a la estimabilidad, solo el 42,9\% de las historias fue considerado estimable, lo que indica que varias agrupan demasiadas funcionalidades como para poder planificar su desarrollo con precisión. Respecto a la independencia, únicamente el 23,8\% de las historias fue considerado independiente, aunque las dependencias encontradas son esperables en el desarrollo de un sistema donde algunas funcionalidades deben completarse antes que otras. Para mejorar este aspecto, se podría agregar al prompt una indicación para que la herramienta marque las dependencias entre historias, o vincularlas manualmente por parte del analista o mediante el uso del agente. Por lo que las historias generadas pueden ser utilizadas como base, pero requieren una revisión previa para reducir ambigüedades, subdividir aquellas que agrupan más de una funcionalidad y aclarar el orden de desarrollo para el equipo.
 
 \section{INVEST}
 
@@ -741,7 +741,7 @@ HU23 & - & - & - & - & - & - & - \\
 
 \subsection{Discusión sobre resultado obtenido en INVEST}
 
-Considerando únicamente las 21 historias no clasificadas como alucinaciones, el 23.8\% obtuvo un puntaje de 4 o 5 en independencia, lo que es consistente con lo observado en QUSF, donde las dependencias encontradas son esperables en un sistema donde algunas funcionalidades deben completarse antes que otras. Respecto a ser negociable y valiosa, el 95.2\% obtuvo un puntaje de 4 o 5 en ambos criterios, lo que indica que las historias describen funcionalidades con un propósito coherente y pueden ser discutidas entre el equipo de desarrollo y el cliente. Por otro lado, solo el 9.5\% fue considerado estimable, el 57.1\% fue clasificado como épica y únicamente el 19\% fue considerado testeable. Esto se debe a que las historias tienden a agrupar varias funcionalidades en una sola, lo que dificulta estimar el trabajo necesario y definir pruebas concretas.
+Considerando únicamente las 21 historias no clasificadas como alucinaciones, el 23,8\% obtuvo un puntaje de 4 o 5 en independencia, lo que es consistente con lo observado en QUSF, donde las dependencias encontradas son esperables en un sistema donde algunas funcionalidades deben completarse antes que otras. Respecto a ser negociable y valiosa, el 95,2\% obtuvo un puntaje de 4 o 5 en ambos criterios, lo que indica que las historias describen funcionalidades con un propósito coherente y pueden ser discutidas entre el equipo de desarrollo y el cliente. Por otro lado, solo el 9,5\% fue considerado estimable, el 57,1\% fue clasificado como épica y únicamente el 19\% fue considerado testeable. Esto se debe a que las historias tienden a agrupar varias funcionalidades en una sola, lo que dificulta estimar el trabajo necesario y definir pruebas concretas.
 
 En conjunto, las historias generadas transmiten correctamente el valor y la intención de cada funcionalidad, pero deben ser refinadas y divididas para ser utilizadas por el equipo de desarrollo y el cliente.
 
@@ -832,7 +832,7 @@ Siguiendo la metodología descrita en el Capítulo \ref{cap:evaluacion}, el proc
 
 \subsection{Alineación semántica entre historias generadas y esperadas}
 La alineación semántica entre historias generadas e historias esperadas se muestra en la Tabla \ref{tab:alignment_histories}.
-Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la Tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0.7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
+Los resultados de alineación indican que el modelo logra capturar en gran medida la intención semántica de las funcionalidades del sistema. En la Tabla \ref{tab:hu_estados} podemos ver los porcentajes de historias de usuario según su similitud semántica. La mayoría de las historias se encuentran alineadas y se obtuvo un valor promedio de similitud de 0,7714, el cual sugiere que, en general, las historias generadas mantienen coherencia con los requisitos definidos en el conjunto esperado.
 
 \begin{table}[htb]
 \centering
@@ -840,9 +840,9 @@ Los resultados de alineación indican que el modelo logra capturar en gran medid
 \hline
 \textbf{Similitud Semántica} & \textbf{Número de Historias Generadas} & \textbf{Porcentaje} \\
 \hline
-Alineadas (>= 0.75)   & 16  & 69.57\%  \\
-Posible alineamiento (>= 0.6) & 5 & 21.74\% \\
-Ausente (< 0.6) & 2 & 8.70\% \\
+Alineadas (>= 0,75)   & 16  & 69,57\%  \\
+Posible alineamiento (>= 0,6) & 5 & 21,74\% \\
+Ausente (< 0,6) & 2 & 8,70\% \\
 \hline
 \end{tabular}
 \caption{Porcentaje de similitud semántica de las historias de usuario generadas}
@@ -864,11 +864,11 @@ Se observa además que en algunos casos una única historia generada presenta al
 \hline
 \endhead
 
-\multirow{3}{*}{HU10} & HUE4 & 0.8207 \\
+\multirow{3}{*}{HU10} & HUE4 & 0,8207 \\
 \cline{2-3}
-     & HUE19 & 0.7201 \\
+     & HUE19 & 0,7201 \\
 \cline{2-3}
-     & HUE20 & 0.6893 \\
+     & HUE20 & 0,6893 \\
 \hline
 
 \end{longtable}
@@ -887,11 +887,11 @@ La Tabla \ref{tab:low_similarity_example} muestra un ejemplo de esto para la his
 \textbf{Ref. Historia Generada} & \textbf{Ref. Historia Esperada Similar} & \textbf{Similitud} \\
 \hline
 
-\multirow{3}{*}{HU22} & HUE46 & 0.3132 \\
+\multirow{3}{*}{HU22} & HUE46 & 0,3132 \\
 \cline{2-3}
-                      & HUE44 & 0.3044 \\
+                      & HUE44 & 0,3044 \\
 \cline{2-3}
-                      & HUE51 & 0.2991 \\
+                      & HUE51 & 0,2991 \\
 \hline
 
 \end{tabular}
@@ -899,7 +899,7 @@ La Tabla \ref{tab:low_similarity_example} muestra un ejemplo de esto para la his
 \label{tab:low_similarity_example}
 \end{table}
 
-Esta historia presenta una similitud significativamente baja con sus mejores coincidencias (0.3132), las cuales además pertenecen a funcionalidades no relacionadas con el dominio de la historia generada. Esto evidencia una limitación del LLM a la hora de generar este tipo de requisitos, representando al menos en este caso un requisito no funcional como una historia de usuario.
+Esta historia presenta una similitud significativamente baja con sus mejores coincidencias (0,3132), las cuales además pertenecen a funcionalidades no relacionadas con el dominio de la historia generada. Esto evidencia una limitación del LLM a la hora de generar este tipo de requisitos, representando al menos en este caso un requisito no funcional como una historia de usuario.
 En conjunto estos resultados evidencian limitaciones del enfoque basado (al menos de manera exclusiva) en similitud semántica, ya que puede producir alineaciones incorrectas desde el punto de vista funcional y no capturar de manera adecuada las diferencias en granularidad o tipo de requisito.
 Esto refuerza la necesidad de complementar la evaluación automática con un análisis manual que permita validar la correspondencia funcional real entre historias, aunque el enfoque propuesto facilita significativamente este proceso, para el caso de la alineación semántica la presentación de las mejores coincidencias (top-3) permite al analista identificar rápidamente las relaciones más relevantes y detectar posibles inconsistencias, como alineaciones incorrectas o casos de baja similitud. La evaluación automática entonces no reemplaza la revisión manual, sino que actúa como una herramienta de apoyo que mejora la eficiencia. 
 Los resultados de alineación, si bien son relevantes y evidencian parte de la calidad de la generación, no resultan suficientes para asegurar la correctitud del contenido generado, es necesario analizar adicionalmente otras dimensiones, como la cobertura del dominio o la detección de alucinaciones.
@@ -916,9 +916,9 @@ En resumen, de los 31 criterios de aceptación generados, la mayoría no obtuvo 
 \hline
 \textbf{Similitud Semántica} & \textbf{Criterios Generados} & \textbf{Porcentaje} \\
 \hline
-Alineadas  (>= 0.75) & 5  & 16.13\%  \\
-Posible alineamiento (>= 0.6) & 9 & 29.03\% \\
-Ausente (< 0.6)& 17 & 54.84\% \\
+Alineadas  (>= 0,75) & 5  & 16,13\%  \\
+Posible alineamiento (>= 0,6) & 9 & 29,03\% \\
+Ausente (< 0,6)& 17 & 54,84\% \\
 \hline
 \end{tabular}
 \caption{Porcentaje de similitud semántica de los criterios de aceptación generados}
@@ -939,9 +939,9 @@ La Tabla \ref{tab:cobertura_funcional} muestra los porcentajes de cobertura del 
 \hline
 \textbf{Estado de cobertura} & \textbf{Historias esperadas} & \textbf{Historias generadas} \\ 
 \hline
-Cubierta & 18 (33.3\%) & 17 (31.5\%) \\ 
-Parcialmente cubierta & 24 (44.4\%) & 24 (44.4\%) \\ 
-No cubierta & 12 (22.2\%) & 13 (24.1\%) \\ 
+Cubierta & 18 (33,3\%) & 17 (31,5\%) \\
+Parcialmente cubierta & 24 (44,4\%) & 24 (44,4\%) \\
+No cubierta & 12 (22,2\%) & 13 (24,1\%) \\
 \hline
 \end{tabular}
 \caption{Cobertura del dominio funcional}
@@ -975,16 +975,16 @@ Los resultados obtenidos se presentan en la Tabla \ref{tab:hallucinations}.
 \hline
 \textbf{Clasificación} & \textbf{Cantidad} & \textbf{Porcentaje} \\
 \hline
-Alineadas & 16 & 69.57\% \\
-Inciertas & 5 & 21.74\% \\
-Posibles alucinaciones & 2 & 8.70\% \\
+Alineadas & 16 & 69,57\% \\
+Inciertas & 5 & 21,74\% \\
+Posibles alucinaciones & 2 & 8,70\% \\
 \hline
 \end{tabular}
 \caption{Resultados de detección de alucinaciones}
 \label{tab:hallucinations}
 \end{table}
 
-Los resultados indican que la mayoría de las historias generadas (69.57\%) se encuentran alineadas con funcionalidades presentes en el dominio, esto muestra una alta capacidad del modelo para generar contenido coherente con los requisitos del sistema. Estas historias presentan valores de similitud altos y corresponden a funcionalidades explícitas del dominio, como la gestión de pacientes, turnos, historia clínica e inventario. Por otro lado, un 21.74\% de las historias se clasifican como inciertas. En estos casos, si bien se observa una correspondencia semántica parcial con el dominio (valores de similitud intermedios, entre 0.60 y 0.75), la relación funcional no es del todo clara. Analizando los casos se observa que esto está asociado a diferencias de granularidad a la hora de representar, o a la combinación de múltiples funcionalidades en una única historia. Además, se identifican dos casos (8.70\%) clasificados como posibles alucinaciones. Estas historias presentan valores de similitud bajos (inferiores a 0.50) y no tienen una correspondencia funcional directa en el conjunto esperado, en particular para nuestro caso corresponden a las historias de usuario consideradas como alucinaciones en la evaluación manual. Como se comentó para estas historias, este tipo de funcionalidades son automatizadas por parte del sistema y no están directamente relacionadas con una acción de un actor.
+Los resultados indican que la mayoría de las historias generadas (69,57\%) se encuentran alineadas con funcionalidades presentes en el dominio, esto muestra una alta capacidad del modelo para generar contenido coherente con los requisitos del sistema. Estas historias presentan valores de similitud altos y corresponden a funcionalidades explícitas del dominio, como la gestión de pacientes, turnos, historia clínica e inventario. Por otro lado, un 21,74\% de las historias se clasifican como inciertas. En estos casos, si bien se observa una correspondencia semántica parcial con el dominio (valores de similitud intermedios, entre 0,60 y 0,75), la relación funcional no es del todo clara. Analizando los casos se observa que esto está asociado a diferencias de granularidad a la hora de representar, o a la combinación de múltiples funcionalidades en una única historia. Además, se identifican dos casos (8,70\%) clasificados como posibles alucinaciones. Estas historias presentan valores de similitud bajos (inferiores a 0,50) y no tienen una correspondencia funcional directa en el conjunto esperado, en particular para nuestro caso corresponden a las historias de usuario consideradas como alucinaciones en la evaluación manual. Como se comentó para estas historias, este tipo de funcionalidades son automatizadas por parte del sistema y no están directamente relacionadas con una acción de un actor.
 
 En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de alucinación y es capaz de generar historias consistentes con el dominio. Sin embargo, los casos inciertos y de posible alucinación evidencian algunas limitaciones en la representación de algunas funcionalidades y restricciones del sistema. Concluimos que la detección de alucinaciones basada en similitud semántica resulta una herramienta útil para identificar inconsistencias.%, pero debe ser complementada con revisión manual para una mayor precisión.
 
@@ -1035,7 +1035,7 @@ En conjunto, estos resultados sugieren que el modelo presenta una baja tasa de a
 % Este
 
 \subsubsection{Discusión sobre Similitud Semántica}
-Los resultados de la evaluación semántica son consistentes con las conclusiones de la evaluación manual en varios puntos concretos. La baja correspondencia en criterios de aceptación (16.13\% alineados) se corresponde con la baja estimabilidad encontrada en QUSF (42.9\%) e INVEST (9.5\%). La alta alineación de historias (91.30\% con al menos posible alineamiento) es coherente con lo observado en QUSF, donde la mayoría de las historias son conceptualmente sólidas y orientadas al problema, y en INVEST, donde el 95.2\% se consideran negociables y valiosas. Por último, la detección de alucinaciones por similitud semántica identificó las mismas dos historias (HU22 y HU23) que el análisis manual. Esta consistencia entre ambos enfoques sugiere que la evaluación automática puede funcionar como un primer filtro antes de la revisión manual, ayudando a identificar los casos que necesitan más atención.
+Los resultados de la evaluación semántica son consistentes con las conclusiones de la evaluación manual en varios puntos concretos. La baja correspondencia en criterios de aceptación (16,13\% alineados) se corresponde con la baja estimabilidad encontrada en QUSF (42,9\%) e INVEST (9,5\%). La alta alineación de historias (91,30\% con al menos posible alineamiento) es coherente con lo observado en QUSF, donde la mayoría de las historias son conceptualmente sólidas y orientadas al problema, y en INVEST, donde el 95,2\% se consideran negociables y valiosas. Por último, la detección de alucinaciones por similitud semántica identificó las mismas dos historias (HU22 y HU23) que el análisis manual. Esta consistencia entre ambos enfoques sugiere que la evaluación automática puede funcionar como un primer filtro antes de la revisión manual, ayudando a identificar los casos que necesitan más atención.
 
 Por otro lado, los resultados también muestran limitaciones del uso de SBERT. Como se observó en los casos de alineación incorrecta, textos que comparten vocabulario pueden obtener valores de similitud altos a pesar de referirse a funcionalidades distintas, mientras que diferencias como quién realiza una acción o el nivel de detalle de una historia no son capturadas por el modelo. Esto debe tenerse en cuenta a la hora de interpretar los valores de similitud obtenidos.
 
