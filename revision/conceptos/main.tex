@@ -1,13 +1,15 @@
-%\section{Conceptos necesarios}
 En esta sección se introducen brevemente los conceptos que son necesarios para comprender el trabajo realizado.
 \section{Metodologías ágiles}
+\label{sec:metodologias_agiles}
 
 Las metodologías ágiles describen un enfoque general para el desarrollo de productos y la gestión de proyectos. Tienen un enfoque flexible que está centrado en el cliente y su colaboración con equipos de desarrollo. Los equipos que utilizan estas metodologías construyen y entregan pequeñas partes de funcionalidad del producto de forma incremental e iterativa. Luego, ajustan lo que entregarán a continuación basándose en la retroalimentación de los clientes y de los principales interesados.~\cite{cohan_agile}
 \section{Historias de usuario}
+\label{sec:historias_de_usuario}
 Una historia de usuario es un escenario: una descripción de un uso (potencial) real de un sistema. Se plantea desde la perspectiva del cliente o del usuario y representa el entendimiento compartido de un equipo sobre lo que el sistema debería hacer.~\cite{wake_definition}
 
-Una de las plantillas utilizadas para la redacción de historias de usuario es: Como un [tipo de usuario], quiero [hacer algo] para que [se cumpla algún objetivo]. Está compuesta entonces por un rol, una acción y un contexto o propósito.
+Una de las plantillas utilizadas para la redacción de historias de usuario es: Como un [tipo de usuario], quiero [hacer algo] para que [se cumpla algún objetivo]~\cite{cohn_user_stories_applied}. Está compuesta entonces por un rol, una acción y un contexto o propósito.
 \subsection{Criterios de aceptación}
+\label{sec:criterios_aceptacion}
 
 Los criterios de aceptación complementan las historias de usuario agregando detalles como condiciones específicas que deben cumplirse para que una historia sea aceptada como completa.~\cite{cohan_details}
 
@@ -15,12 +17,13 @@ Por ejemplo, dada la historia: Como usuario, puedo iniciar sesión a través de 
 
 Posibles criterios de aceptación serían:
 \begin{itemize}
-    \item Puede iniciar sesión a través de Facebook
-    \item Puede iniciar sesión a través de LinkedIn
-    \item Puede iniciar sesión a través de Twitter
+    \item Puede iniciar sesión a través de Facebook.
+    \item Puede iniciar sesión a través de LinkedIn.
+    \item Puede iniciar sesión a través de Twitter.
 \end{itemize}
 
 \subsection{Épicas}
+\label{sec:epicas}
 Una épica es una historia de usuario grande que normalmente no puede completarse en una sola iteración y que debe dividirse en varias historias de usuario más pequeñas.~\cite{cohan_epic}
 
 Por ejemplo, la historia: Como usuario autorizado, puedo ejecutar reportes para poder ver el estado financiero de la organización.
@@ -32,72 +35,127 @@ Puede dividirse en diferentes tipos de reportes financieros:
   \item Como usuario autorizado, puedo ejecutar un reporte detallado de transacciones.
 \end{itemize}
 
+\subsection{Calidad de historias de usuario}
+\label{sec:calidad_historias}
+
+Existen diferentes marcos de referencia con los que se puede evaluar la calidad de una historia de usuario. A continuación se presentan los utilizados en este trabajo.
+
+\subsubsection{Quality User Story Framework (QUSF)}
+\label{sec:qusf}
+
+El \textit{Quality User Story Framework} (QUSF) define tres dimensiones fundamentales de calidad para las historias de usuario: sintáctica, semántica y pragmática~\cite{aqusa-paper}.
+
+La dimensión sintáctica analiza la estructura textual de las historias sin considerar su significado, incluyendo aspectos como la gramática, la redacción y el cumplimiento de la estructura esperada. La dimensión semántica evalúa el significado del contenido, verificando que las historias sean claras, consistentes y correctamente relacionadas dentro del dominio del problema. La dimensión pragmática analiza cómo las historias pueden ser interpretadas por los desarrolladores y si resultan adecuadas para su uso dentro de procesos de desarrollo~\cite{aqusa-paper}.
+
+Los criterios definidos por QUSF son los siguientes:
+
+\begin{itemize}
+  \item \textbf{Sintáctica:} bien formada (la historia incluye al menos un rol y un medio), atómica (expresa un requisito para exactamente una funcionalidad) y mínima (contiene únicamente rol, medio y fin).
+  \item \textbf{Semántica:} conceptualmente sólida (el medio expresa una funcionalidad y el fin una justificación), orientada al problema (especifica solo el problema, no la solución), libre de ambigüedad (evita términos que permitan múltiples interpretaciones) y libre de conflictos (no es inconsistente con otras historias).
+  \item \textbf{Pragmática:} oración completa, estimable, única (sin duplicados), uniforme (todas emplean la misma plantilla), independiente (autocontenida) y completa (el conjunto permite una aplicación sin pasos faltantes).
+\end{itemize}
+
+AQUSA (\textit{Automatic Quality User Story Artisan}) es una herramienta que implementa parcialmente el esquema de evaluación propuesto por QUSF. Permite evaluar automáticamente criterios de carácter sintáctico (atomicidad, minimalidad, buen formato) y algunos aspectos pragmáticos (unicidad y uniformidad)~\cite{aqusa-paper}.
+
+\subsubsection{INVEST}
+\label{sec:invest}
+
+El modelo INVEST define seis criterios para evaluar la calidad de las historias de usuario: \textit{Independent} (independiente), \textit{Negotiable} (negociable), \textit{Valuable} (valiosa), \textit{Estimable} (estimable), \textit{Small} (pequeña) y \textit{Testable} (verificable)~\cite{wake_invest}. Estos criterios permiten analizar si las historias pueden ser utilizadas adecuadamente dentro de metodologías ágiles de desarrollo.
+
+\section{Documentos de requisitos}
+\label{sec:documentos_requisitos}
+
+Un documento de requisitos de software es una especificación que describe las funciones que un sistema debe realizar, las restricciones bajo las cuales debe operar y las propiedades que debe exhibir~\cite{ieee830}. En el contexto de este trabajo, los documentos de requisitos de producto (PDR) constituyen la entrada a partir de la cual se generan automáticamente las historias de usuario.
+
 \section{Inteligencia Artificial}
-La inteligencia artificial (IA) abarca una gran variedad de campos, que van desde los más generales (como el aprendizaje y la percepción) hasta otros más específicos, como jugar ajedrez, demostrar teoremas matemáticos, escribir poesía, conducir un automóvil en una calle concurrida y diagnosticar enfermedades. \cite{IABook} En la Tabla \ref{table:defIA} se presentan ocho definiciones de inteligencia artificial.
+\label{sec:inteligencia_artificial}
+La inteligencia artificial (IA) abarca una gran variedad de campos, que van desde los más generales (como el aprendizaje y la percepción) hasta otros más específicos, como jugar ajedrez, demostrar teoremas matemáticos, escribir poesía, conducir un automóvil en una calle concurrida y diagnosticar enfermedades~\cite{IABook}. En la Tabla~\ref{table:defIA} se presentan ocho definiciones de inteligencia artificial.
 
 \begin{table}[!ht]
-\label{table:defIA}
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|}
 \hline
 \textbf{Pensar como humanos} & \textbf{Pensar racionalmente} \\ \hline
 
-“El emocionante nuevo esfuerzo por hacer que las computadoras piensen... máquinas con mente, en el sentido pleno y literal.” (Haugeland, 1985)
+``El emocionante nuevo esfuerzo por hacer que las computadoras piensen... máquinas con mente, en el sentido pleno y literal.'' (Haugeland, 1985)
 
-“La automatización de actividades que asociamos con el pensamiento humano, actividades como la toma de decisiones, la resolución de problemas y el aprendizaje.” (Bellman, 1978)
+``La automatización de actividades que asociamos con el pensamiento humano, actividades como la toma de decisiones, la resolución de problemas y el aprendizaje.'' (Bellman, 1978)
 
 &
-“El estudio de las facultades mentales mediante el uso de modelos computacionales.” (Charniak y McDermott, 1985)
+``El estudio de las facultades mentales mediante el uso de modelos computacionales.'' (Charniak y McDermott, 1985)
 
-“El estudio de los cálculos que hacen posible percibir, razonar y actuar.” (Winston, 1992)
+``El estudio de los cálculos que hacen posible percibir, razonar y actuar.'' (Winston, 1992)
 \\ \hline
 
 \textbf{Actuar como humanos} & \textbf{Actuar racionalmente} \\ \hline
 
-“El arte de crear máquinas que realizan funciones que requieren inteligencia cuando son realizadas por personas.” (Kurzweil, 1990)
+``El arte de crear máquinas que realizan funciones que requieren inteligencia cuando son realizadas por personas.'' (Kurzweil, 1990)
 
-“El estudio de cómo hacer que las computadoras hagan cosas en las que, por el momento, las personas son mejores.” (Rich y Knight, 1991)
+``El estudio de cómo hacer que las computadoras hagan cosas en las que, por el momento, las personas son mejores.'' (Rich y Knight, 1991)
 
 &
-“La inteligencia computacional es el estudio del diseño de agentes inteligentes.” (Poole et al., 1998)
+``La inteligencia computacional es el estudio del diseño de agentes inteligentes.'' (Poole et al., 1998)
 
-“La IA se ocupa del comportamiento inteligente en artefactos.” (Nilsson, 1998)
+``La IA se ocupa del comportamiento inteligente en artefactos.'' (Nilsson, 1998)
 \\ \hline
 
 \end{tabular}
-\caption{Figura 1.1 de Artificial Intelligence: A Modern Approach: Algunas definiciones de inteligencia artificial organizadas en cuatro categorías. }
+\caption{Algunas definiciones de inteligencia artificial organizadas en cuatro categorías. Adaptado de la Figura 1.1 de \textit{Artificial Intelligence: A Modern Approach}~\cite{IABook}.}
+\label{table:defIA}
 \end{table}
 
 \subsection{Modelos}
-En la actualidad, la IA está experimentando un cambio de paradigma con el surgimiento de modelos (por ejemplo, BERT, DALL-E, GPT-3) entrenados con datos amplios (generalmente utilizando autoaprendizaje a gran escala) que pueden adaptarse a una amplia gama de tareas posteriores \cite{bommasani2021foundation}. La Figura \ref{fig:model} ilustra esto.
-\newpage
+\label{sec:modelos}
+En la actualidad, la IA está experimentando un cambio de paradigma con el surgimiento de modelos (por ejemplo, BERT, DALL-E, GPT-3) entrenados con grandes volúmenes de datos (generalmente utilizando aprendizaje auto-supervisado a gran escala) que pueden adaptarse a una amplia gama de tareas posteriores~\cite{bommasani2021foundation}. La Figura~\ref{fig:model} ilustra esto.
+
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figs/model.png}
-    \caption{Figura 2 de On the Opportunities and Risks of
-Foundation Models: Un modelo base puede centralizar la información de todos los datos provenientes de diversas modalidades. Este único modelo luego puede adaptarse a una amplia gama de tareas posteriores.}
+    \caption{Un modelo base puede centralizar la información de todos los datos provenientes de diversas modalidades, para luego adaptarse a una amplia gama de tareas posteriores. Adaptado de la Figura 2 de \textit{On the Opportunities and Risks of Foundation Models}~\cite{bommasani2021foundation}.}
     \label{fig:model}
 \end{figure}
 
 
 \subsection{Grandes modelos de lenguaje}
-El procesamiento de lenguaje natural (NLP) es el campo de la inteligencia artificial que se ocupa de permitir que las computadoras comprendan y procesen lenguajes humanos.~\cite{IABook}
+\label{sec:llm}
+El procesamiento de lenguaje natural (NLP) es el campo de la inteligencia artificial que se ocupa de permitir que las computadoras comprendan y procesen lenguajes humanos~\cite{IABook}.
 
-Los modelos de lenguaje son aquellos aplicados al campo del procesamiento del lenguaje natural. Actualmente, los grandes modelos de lenguaje o Large Language Models (LLM) son los más utilizados, en particular en tareas de generación de texto, como la elaboración de resúmenes y la generación de diálogos.~\cite{bommasani2021foundation}
+Los modelos de lenguaje son aquellos aplicados al campo del procesamiento del lenguaje natural. Actualmente, los grandes modelos de lenguaje o \textit{Large Language Models} (LLM) son los más utilizados, en particular en tareas de generación de texto, como la elaboración de resúmenes y la generación de diálogos~\cite{bommasani2021foundation}.
 
-En 2020, el artículo Language Models are Few-Shot Learners~\cite{brown2020language} presentó el modelo GPT-3, que popularizó el uso de la inteligencia artificial en los años siguientes.~\cite{miller2023artificial}
+En 2020, el artículo \textit{Language Models are Few-Shot Learners}~\cite{brown2020language} presentó el modelo GPT-3, que popularizó el uso de la inteligencia artificial en los años siguientes~\cite{miller2023artificial}.
 
-\subsection{Instrucción (Prompt)}
+\subsection{Alucinaciones}
+\label{sec:alucinaciones}
 
-Para utilizar los modelos en tareas de predicción, la entrada original $x$ se modifica mediante una plantilla para convertirla en una cadena de texto (prompt) $x'$ que contiene espacios sin completar. Luego, se utiliza el modelo de lenguaje para completar la información faltante de forma probabilística.~\cite{liu2021prompting}
+En el contexto de los modelos de lenguaje, una alucinación ocurre cuando el modelo genera contenido que no está respaldado por la información de entrada proporcionada. En particular, el modelo puede introducir elementos o funcionalidades que no están presentes en el documento original utilizado como fuente. La detección de alucinaciones es relevante cuando se utilizan LLM para generar artefactos a partir de documentos existentes, ya que permite identificar información fabricada por el modelo.
 
-En términos simples, un prompt es un texto en lenguaje natural que indica de alguna manera la tarea que la inteligencia artificial debe realizar. 
+\subsection{Similitud semántica}
+\label{sec:similitud_semantica}
 
-Por ejemplo, en la Figura~\ref{fig:ejemplo_prompt} se muestra un prompt que indica traducir al inglés la frase ``Hola Mundo''.
+La similitud semántica es una medida que cuantifica el grado en que dos textos expresan un significado similar. Para calcularla, los textos se representan como vectores numéricos denominados \textit{embeddings}, que capturan su contenido semántico en un espacio vectorial.
+
+\textit{Sentence-BERT} (SBERT) es un modelo que genera \textit{embeddings} a nivel de oración, permitiendo calcular la similitud semántica entre pares de textos de forma eficiente~\cite{reimers-2019-sentence-bert}. A partir del valor de similitud obtenido, es posible definir umbrales para determinar si dos textos se consideran semánticamente equivalentes.
+
+\subsection{Instrucción (\textit{Prompt})}
+\label{sec:prompt}
+
+Para utilizar los modelos en tareas de predicción, la entrada original $x$ se modifica mediante una plantilla para convertirla en una cadena de texto (\textit{prompt}) $x'$ que contiene espacios sin completar. Luego, se utiliza el modelo de lenguaje para completar la información faltante de forma probabilística.~\cite{liu2021prompting}
+
+En términos simples, un \textit{prompt} es un texto en lenguaje natural que indica de alguna manera la tarea que la inteligencia artificial debe realizar.
+
+El diseño del \textit{prompt} influye directamente en la calidad de la respuesta generada. Entre las principales técnicas de ingeniería de \textit{prompts} se encuentran~\cite{liu2021prompting}:
+
+\begin{itemize}
+  \item \textit{Zero-shot prompting}: el modelo recibe únicamente la descripción de la tarea, sin ejemplos previos, y se apoya en el conocimiento adquirido durante su entrenamiento.
+  \item \textit{Few-shot prompting}: se proporciona al modelo un conjunto reducido de ejemplos de entrada y salida esperada antes de la tarea objetivo, lo que guía su comportamiento sin modificar sus parámetros~\cite{brown2020language}.
+  \item \textit{Chain-of-thought prompting}: el \textit{prompt} incluye pasos de razonamiento intermedios, incentivando al modelo a generar una cadena de razonamiento explícita antes de producir la respuesta final~\cite{wei2022chainofthought}.
+\end{itemize}
+
+Por ejemplo, en la Figura~\ref{fig:ejemplo_prompt} se muestra un \textit{prompt} que indica traducir al inglés la frase ``Hola Mundo''.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figs/ejemploprompt.png}
-    \caption{Ejemplo de prompt para la traducción al inglés}
+    \caption{Ejemplo de \textit{prompt} para la traducción al inglés}
     \label{fig:ejemplo_prompt}
 \end{figure}
