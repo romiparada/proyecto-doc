@@ -8,7 +8,7 @@ ScopeMaster \cite{scopemaster} menciona en su página que puede ser utilizado pa
 Tiene una integración con Jira gratuita, llamada StoryAnalizer \cite{storyanalizer}
 enfocada en analizar historias de usuario para la mejora, pero no clarifica la generación automática de ellas. Por lo que es filtrada.
 
-RequirementLinter, es una herramienta para el análisis de historias de usuario o requerimientos \cite{requirementlinter}. Se centra en identificar la calidad de las historias, no en su generación. Esta herramienta es filtrada ya que no cumple.
+RequirementLinter, es una herramienta para el análisis de historias de usuario o requerimientos \cite{requirementlinter}. Se centra en identificar la calidad de las historias, no en su generación. Esta herramienta es filtrada ya que no cumple con los criterios de generación.
 
 POPal, AI Test Case \& User Story Generator for Jira \cite{popal},  en su página tiene un video explicativo donde muestra que se puede generar historias de usuario a partir de épicas, por lo que pasa el filtrado. Y tiene prueba gratuita por lo que puede ser probada en el análisis.
 
@@ -214,7 +214,7 @@ AutoStory: AI-Powered Ticket Creation for Jira & \textbf{Incluida}, genera user 
 \subsection{Segundo filtro}
 Dadas las herramientas que pasaron el primer filtro, el siguiente paso es probar la generación de historias de usuario directamente en la plataforma.
 
-En primera instancia fue posible descartar todas las herramientas que no se pudieron probar; Beam AI User Stories no fue posible contactarse para conseguir acceso a la plataforma. AI Agile Story/Bug Generation da error al intentar instalarla y AutoStory: AI-Powered Ticket Creation for Jira está desactualizada y no es posible probarla.
+En primera instancia fue posible descartar las herramientas que no se pudieron probar: para Beam AI User Stories no fue posible contactarse para conseguir acceso a la plataforma, AI Agile Story/Bug Generation dio error al intentar instalarla y AutoStory: AI-Powered Ticket Creation for Jira está desactualizada y no es posible probarla.
 
 Para las herramientas que sí se obtuvo acceso se utilizó un documento técnico que contiene requisitos técnicos que permiten generar historias de usuario e incluye una inconsistencia que la herramienta podría detectar. Junto al documento también se utilizó, para las herramientas que lo requieran, un prompt simple que instruye al asistente a generar las historias, incluir criterios de aceptación, referencias al documento y conflictos.
 
@@ -241,7 +241,7 @@ POPal --- AI Test Case \& User Story Generator for Jira permite generar las hist
 
 StoryCraft fue filtrada ya que requiere procesar requerimiento por requerimiento, no a partir del documento completo. % Valentin esto tiene sentido?
 
-Modern Requirements4DevOps, la cual incluye Copilot4DevOps fue incluida ya que contiene un chat que procesa el documento junto al prompt para generar historias que incluyen todos los requerimientos definidos. Y Copilot4DevOps tiene un botón automático para la generación, no requiere del prompt, aunque esto causa que se pierda el requisito de trazabilidad, pero el mismo puede ser editado.
+Modern Requirements4DevOps, la cual incluye Copilot4DevOps, fue incluida ya que contiene un chat que procesa el documento junto al prompt para generar historias que incluyen todos los requerimientos definidos. Copilot4DevOps tiene un botón automático para la generación, no requiere del prompt, aunque esto causa que se pierda el requisito de trazabilidad, pero el mismo puede ser editado.
 
 StoriesOnBoard fue incluida en el filtrado inicial por su capacidad de generar
 y refinar historias de usuario. Sin embargo, no permite la generación de
@@ -250,13 +250,13 @@ manual de tarjetas que representan actores y sus funciones dentro del sistema, p
 
 ClickUp fue incluida, la misma cumple con todos los requisitos.
 
-Miro, fue incluida, requiere de prompt y en la prueba realizada generó las historias, incluyendo todos los requerimientos a excepción de la validación/refinado de historias, que no fue encontrada la manera en la primera prueba de la herramienta.
+Miro fue incluida, requiere de prompt y en la prueba realizada generó las historias, incluyendo todos los requerimientos a excepción de la validación/refinado de historias, para la cual no se encontró la forma de realizarla en la primera prueba de la herramienta.
 
 StoryMachine, fue incluida, es automática y no requiere de prompt, generó las historias a partir del documento, incluyendo criterios de aceptación y validación de las mismas.
 
 Agile-bot fue filtrada, ya que no está orientada a historias de usuario sino a tareas técnicas. No detecta inconsistencias. La trazabilidad es básica pero útil. No permite refinar ni mejorar historias. No tiene criterios de aceptación.
 
-AutoDev Editor fue incluida ya que genera historias de usuario. Tiene para elegir varios modelos para la generación pero solo funciona uno, y no se mantiene consistente en la generación cuando se refinan las historias, no funciona bien. Por lo que no se puede refinar historias generadas, tampoco detectó las inconsistencias ni contiene trazabilidad.
+AutoDev Editor fue incluida ya que genera historias de usuario. Permite elegir varios modelos para la generación, pero solo funciona uno y no se mantiene consistente en la generación cuando se refinan las historias. Por lo que no se puede refinar historias generadas, tampoco detectó las inconsistencias ni contiene trazabilidad.
 
 Specifai fue incluida ya que genera en base a un título y una mínima descripción opcional, luego permite agregar requisitos en formato texto. Se puede iterar sobre lo generado, según la vista previa de la aplicación contiene un chat, pero no fue posible encontrarlo y utilizarlo en la prueba.
 
@@ -347,17 +347,17 @@ En la Tabla \ref{tab:incluidasfiltrado2} se listan todas las herramientas inclui
 \hline
 \endlastfoot
 
-POPal --- AI Test Case \& User Story Generator for Jira & Si & Si & Si & No & Si & No \\
-Modern Requirements4DevOps & Si & No & Si & Si & Si & Si \\
-Copilot4DevOps & Si & Si & Si & Si & Si & No \\
-ClickUp & Si & No & Si & Si & Si & Si \\
-Miro & Si & No & Si & Si & No & Si \\
-StoryMachine & Si & Si & Si & No & Si & No \\
-AutoDev Editor & Si & No & Si & No & No & No \\
-Specifai & Si & Si & No & No & Si & No \\
-QAssert TestCase and UserStory Generator & Si & Si & Si & No & No & No \\
-AI Requirements Copilot for Jira & Si & Si & Si & No & No & No \\
-Storygenie & Si & No & No & No & No & No \\
+POPal --- AI Test Case \& User Story Generator for Jira & Sí & Sí & Sí & No & Sí & No \\
+Modern Requirements4DevOps & Sí & No & Sí & Sí & Sí & Sí \\
+Copilot4DevOps & Sí & Sí & Sí & Sí & Sí & No \\
+ClickUp & Sí & No & Sí & Sí & Sí & Sí \\
+Miro & Sí & No & Sí & Sí & No & Sí \\
+StoryMachine & Sí & Sí & Sí & No & Sí & No \\
+AutoDev Editor & Sí & No & Sí & No & No & No \\
+Specifai & Sí & Sí & No & No & Sí & No \\
+QAssert TestCase and UserStory Generator & Sí & Sí & Sí & No & No & No \\
+AI Requirements Copilot for Jira & Sí & Sí & Sí & No & No & No \\
+Storygenie & Sí & No & No & No & No & No \\
 \end{longtable}
 
 Por lo tanto tenemos once herramientas para evaluar sus historias de usuario. Se decidió hacer un ranking dados los requisitos, para seleccionar las herramientas más completas.
