@@ -3,7 +3,6 @@
 En esta sección se describe la obtención de la lista de las herramientas para el análisis. Se quiere filtrar todas las herramientas obtenidas con los criterios de inclusión/exclusión. Se explica brevemente para cada herramienta si la misma fue filtrada o incluida en la lista.
 
 \subsection{Primer filtrado}
-% Las primeras 10 probadas por Romina
 ScopeMaster \cite{scopemaster} menciona en su página que puede ser utilizado para el análisis de requisitos y diferentes funcionalidades de generación, como la de casos de uso. No menciona la generación de historias de usuario, ya que habla sobre pasos que vendrían después de tener ya las historias de usuario creadas, como creación de casos de prueba o diagramas.
 Tiene una integración con Jira gratuita, llamada StoryAnalizer \cite{storyanalizer}
 enfocada en analizar historias de usuario para la mejora, pero no clarifica la generación automática de ellas. Por lo que es filtrada.
@@ -25,15 +24,12 @@ Aqusa \cite{aqusa}, utilizada para la calidad de historias. Filtrada.
 Reqsuite~\cite{reqsuite}, filtrada ya que la IA es utilizada para control de calidad y sugerencias, no para la generación de historias de usuario.
 
 Por lo tanto, de las diez primeras herramientas, quedaron dos para probar directamente el producto: POPal y StoryCraft.
-% Hasta aca lo probado por Romina
 
-% Le tocaba a Valentin pero Probado por Romina
 Modern Requirements4DevOps \cite{modernreq1} menciona en su página \cite{modernreq2} que la herramienta puede ser utilizada para generar historias de usuario. Copilot4DevOps \cite{copilotfordevops1} es un módulo incluido dentro de Modern Requirements4DevOps y permite la generación de historias de usuario según su blog \cite{copilotfordevops2}. Dado que Copilot4DevOps forma parte de Modern Requirements4DevOps, ambas se consideran como una única solución a los efectos de este análisis, aunque se registran por separado en las tablas de filtrado para documentar sus capacidades individuales.
 
 Ambiguity Detection Using LLMs (ChaseMc-Clellan) \cite{ambiguitydect}, no presenta archivo de código para generación de historias de usuario. Similar RE-Ambiguity-Detection-Experiment (+OpenReq) \cite{reambiguity} descartado dado que es un experimento de detección de ambigüedad no generación de historias de usuario.
 
 Reqnroll \cite{reqnroll} fue filtrada ya que no menciona la generación de historias de usuario, dado que consiste en una herramienta de pruebas.
-% las primeras 5 de Valentin probado por Romina
 
 Quality Modeller - Curiosity Software \cite{qualitymodeller} queda filtrada, ya que aunque la herramienta ofrece soporte para la automatización de pruebas y permite la importación de requisitos, no genera historias de usuario con criterios de aceptación en formato ágil.
 
@@ -44,10 +40,7 @@ GitHub Spec-Kit \cite{spec-kit} no pasa el filtro, ya que su enfoque está centr
 AI Requirements Engineer Assistant \cite{ai-requirements-engineer-assistant} no pasa el filtro, ya que se orienta a analizar, validar y mejorar documentos de requisitos, detectando ambigüedades, extrayendo requisitos y respondiendo preguntas sobre el documento. La herramienta ofrece funcionalidades avanzadas de ingeniería de requisitos, pero no genera historias de usuario de forma automática, por lo que queda descartada.
 
 GeneUS \cite{geneus} queda filtrada, ya que es solo un artículo académico que describe una herramienta conceptual basada en GPT‑4 para generar historias de usuario y casos de prueba automáticamente, pero no hay evidencia pública de una herramienta funcional disponible.
-% las ultimas 5 de Valentin probadas por Gonza
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 AutoDev Editor \cite{autodeveditor} es un editor de contenido basado en IA distribuido como proyecto de código abierto. En su repositorio se lo describe como un editor sofisticado para la creación de distintos tipos de contenido, incluyendo explícitamente “blogs, articles, user stories, and more”, es decir, historias de usuario entre los formatos soportados. La herramienta integra capacidades de generación y edición asistida, utilizando modelos de lenguaje para producir y refinar texto dentro del propio editor. Dado que la generación de historias de usuario forma parte del caso de uso declarado, y que el proyecto se encuentra públicamente disponible y mantenido, AutoDev Editor pasa el Filtrado 1 y se incluye en el conjunto de herramientas a analizar.
 
 Specifai \cite{specifai} se presenta como una plataforma impulsada por IA para gestionar el ciclo de vida de requisitos y documentación. Su repositorio oficial la describe como una solución que transforma la gestión de requisitos de proyecto, automatizando documentación, generación de tareas y otros artefactos mediante flujos guiados por IA. En el ecosistema asociado se detalla además un servidor MCP que permite interactuar con documentos de requisitos como business requirements, product requirements y user stories, lo que indica soporte explícito para historias de usuario como tipo de artefacto manejado por la herramienta. Por tratarse de una solución que toma requisitos como entrada y genera documentación estructurada, incluyendo user stories, Specifai cumple el criterio de generación explícita de historias y se incluye en el Filtrado 1.
@@ -91,9 +84,6 @@ User Story Generator \cite{userstorygenerator} no pasa el filtro ya que no utili
 AI-Driven Agile Team \cite{aidrivenagileteam}, no pasa el filtro ya que consta de un ejemplo utilizando IA para generar historias para un caso en particular.
 
 En la Tabla~\ref{table:filtrado1} se listan todas las herramientas y su estado.
-
-%Quality Modeller \
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 \begin{center}
 \begin{longtable}{|p{6.5cm}|p{4cm}|p{1.8cm}|}
@@ -146,7 +136,6 @@ Miro & \textbf{Incluida}, genera historias desde contenido del tablero interno d
 StoryMachine & \textbf{Incluida}, genera historias a partir de PRDs y especificaciones & 15/11/2025 \\
 Agile-bot & \textbf{Incluida}, genera y valida historias automáticamente & 15/11/2025 \\
 User Story Generator & Filtrada, no utiliza IA & 19/11/2025 \\
-%Story-craft & - & - \\
 AI-Driven Agile Team & Filtrada, es un ejemplo de prueba & 19/11/2025 \\
 AutoDev Editor & \textbf{Incluida}, menciona generación de user stories en su documentación & 16/11/2025 \\
 Specifai & \textbf{Incluida}, plataforma de requisitos con generación de user stories & 16/11/2025 \\
