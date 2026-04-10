@@ -8,8 +8,6 @@ ScopeMaster \cite{scopemaster} menciona en su página que puede ser utilizado pa
 Tiene una integración con Jira gratuita, llamada StoryAnalizer \cite{storyanalizer}
 enfocada en analizar historias de usuario para la mejora, pero no clarifica la generación automática de ellas. Por lo que es filtrada.
 
-RequirementLinter, es una herramienta para el análisis de historias de usuario o requerimientos \cite{requirementlinter}. Se centra en identificar la calidad de las historias, no en su generación. Esta herramienta es filtrada ya que no cumple con los criterios de generación.
-
 POPal, AI Test Case \& User Story Generator for Jira \cite{popal},  en su página tiene un video explicativo donde muestra que se puede generar historias de usuario a partir de épicas, por lo que pasa el filtrado. Y tiene prueba gratuita por lo que puede ser probada en el análisis.
 
 StoryCraft \cite{storycraft},  herramienta con repositorio disponible, siendo su propósito la generación de historias de usuario por lo que es incluida.
@@ -228,11 +226,7 @@ Para las herramientas que sí se obtuvo acceso se utilizó un documento técnico
     historia generada con una sección del documento de entrada.
 \end{verbatim}
 
-Para las herramientas que requieren prompting explícito, se utilizó un prompt simple como línea base. Definimos “simple” como una instrucción breve, sin requerir formatos rígidos ni plantillas específicas, que solicita únicamente las capacidades mínimas del estudio: generación de historias, criterios de aceptación, detección de conflictos y trazabilidad hacia el documento fuente.
-
-Este enfoque permite mantener comparabilidad entre herramientas con interfaces y limitaciones distintas, reducir el sesgo introducido por instrucciones excesivamente largas o dependientes de funcionalidades particulares, y disminuir el costo de interacción requerido por el analista. Además, dado el tiempo y recursos acotados para ejecutar pruebas sobre múltiples soluciones, el prompt simple permitió estandarizar rápidamente ejecuciones repetibles sin diseñar instrucciones por herramienta.
-
-En una segunda etapa se empleó un prompt completo alineado con la metodología del proyecto (incluyendo salida estructurada e indicadores INVEST), con el objetivo de evaluar el desempeño de las herramientas bajo un escenario de mayor guía y exigencia, y analizar su sensibilidad al nivel de detalle del prompting.
+Para las herramientas que requieren prompting explícito, se utilizó un prompt simple como línea base: una instrucción breve que solicita las capacidades mínimas del estudio (generación de historias, criterios de aceptación, detección de conflictos y trazabilidad). En una segunda etapa se empleó un prompt completo alineado con la metodología del proyecto. El diseño y racional de ambos niveles de prompting se describen en la Sección~\ref{sec:diseno-prompts}.
 
 
 De esta manera se comprobarán los requisitos: Generación de Historias con IA, Es automática (no requiere prompt), Inclusión de criterios de aceptación, Detección de inconsistencias, Permite Validar/Refinar las Historias, Trazabilidad.

@@ -66,50 +66,7 @@ v2 &
 \end{longtable}
 
 % Explicación de armado de la cadena
-La cadena de búsqueda se organizó por conceptos. En primer lugar, se incluyeron los términos principales asociados a historias de usuario (``user story'' y ``user stories''). Luego se agregaron términos vinculados a IA y a generación automática (por ejemplo, ``AI'' y ``generation''). A continuación se incluyeron términos para limitar los resultados a soluciones concretas (por ejemplo, ``tool''). Por último, se incorporaron términos del contexto de desarrollo de software (por ejemplo, ``software'').
-
-\begin{verbatim} 
-("user story" OR "user stories") AND
-("generative" OR "generation" OR "generate" OR
-"automate" OR "automation" OR "creation" OR 
-"AI" OR "artificial intelligence" OR 
-"language model" OR "LLM" OR
-"natural language processing" OR "NLP" OR
-"agent" OR "assistant") AND ("tool" OR "application" OR
-"platform" OR "service" OR "system" OR "extension" OR
-"solution" OR "integration" OR "integrated") AND
-("requirement" OR "engineering" OR "software" OR
-"project" OR "product" OR "management" OR "agile")
-\end{verbatim}
-
-
-Además, se definió un conjunto de requerimientos adicionales a la generación automática de historias. Para reflejarlo en la búsqueda, se agregó un bloque extra a la cadena, que exige al menos uno de esos requerimientos.
-
-\begin{verbatim}
-("acceptance criteria" OR "traceability" OR
-"inconsistency" OR "consistency" OR "ambiguity" OR
-"conflict" OR "contradiction" OR "quality" OR
-"validation")  
-\end{verbatim}
-
-Por lo tanto, la cadena completa es:
-\begin{verbatim} 
-("user story" OR "user stories") AND
-("generative" OR "generation" OR "generate" OR
-"automate" OR "automation" OR "creation" OR 
-"AI" OR "artificial intelligence" OR 
-"language model" OR "LLM" OR
-"natural language processing" OR "NLP" OR
-"agent" OR "assistant") AND ("tool" OR "application" OR
-"platform" OR "service" OR "system" OR "extension" OR
-"solution" OR "integration" OR "integrated") AND
-("requirement" OR "engineering" OR "software" OR
-"project" OR "product" OR "management" OR "agile")
-AND ("acceptance criteria" OR "traceability" OR
-"inconsistency" OR "consistency" OR "ambiguity" OR
-"conflict" OR "contradiction" OR "quality" OR
-"validation")
-\end{verbatim}
+La cadena de búsqueda (versión v2 en la Tabla~\ref{table:cadenas-busqueda}) se organizó por conceptos. En primer lugar, se incluyeron los términos principales asociados a historias de usuario (``user story'' y ``user stories''). Luego se agregaron términos vinculados a IA y a generación automática (por ejemplo, ``AI'' y ``generation''). A continuación se incluyeron términos para limitar los resultados a soluciones concretas (por ejemplo, ``tool''). Por último, se incorporaron términos del contexto de desarrollo de software (por ejemplo, ``software'') y un bloque adicional que exige al menos uno de los requerimientos complementarios definidos (criterios de aceptación, trazabilidad, detección de inconsistencias o validación de calidad).
 
 Para restringir la búsqueda a resultados de GitHub, se utilizó la cadena de Google con el prefijo 
 \begin{verbatim}
