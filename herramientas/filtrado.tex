@@ -97,7 +97,8 @@ En la Tabla \ref{table:filtrado1} se listan todas las herramientas y su estado.
 
 \begin{center}
 \begin{longtable}{|p{6.5cm}|p{4cm}|p{1.8cm}|}
-\caption{Filtrado a partir de documentación} \\
+\caption{Filtrado a partir de documentación}
+\label{table:filtrado1} \\
 \hline
 \textbf{Herramienta} & \textbf{Estado} & \textbf{Fecha de ejecución} \\
 \hline
@@ -160,7 +161,6 @@ Storygenie & \textbf{Incluida}, genera epics y user stories a partir de prompts 
 AutoStory: AI-Powered Ticket Creation for Jira & \textbf{Incluida}, genera user stories y bugs en Jira usando ChatGPT & 16/11/2025 \\
 \hline
 \end{longtable}
-\label{table:filtrado1}
 \end{center}
 
 
@@ -168,7 +168,8 @@ Por lo tanto se tienen dieciocho herramientas que mencionan en su documentación
 
 \begin{center}
 \begin{longtable}{|p{7cm}|p{4cm}|p{1.8cm}|}
-\caption{Herramientas Incluidas luego del filtrado general} \\
+\caption{Herramientas Incluidas luego del filtrado general}
+\label{table:filtrado2} \\
 \hline
 \textbf{Herramienta} & \textbf{Estado} & \textbf{Fecha de ejecución} \\
 \hline
@@ -206,7 +207,6 @@ Storygenie & \textbf{Incluida}, genera epics y user stories a partir de prompts 
 AutoStory: AI-Powered Ticket Creation for Jira & \textbf{Incluida}, genera user stories y bugs en Jira usando ChatGPT & 16/11/2025 \\
 \hline
 \end{longtable}
-\label{table:filtrado2}
 \end{center}
 
 \subsection{Segundo filtro}
@@ -262,11 +262,12 @@ AI Requirements Copilot for Jira, fue incluida pero la generación de historias 
 
 Storygenie fue incluida, genera los registros con las historias de usuario, solo con un título y una descripción, no incluye criterios de aceptación, trazabilidad y tampoco detecta inconsistencias.
 
-En la Tabla \ref{table:filtrados3}, se muestra el estado de cada herramienta luego de este filtrado.
+En la Tabla \ref{table:filtrado3}, se muestra el estado de cada herramienta luego de este filtrado.
 
 \begin{center}
 \begin{longtable}{|p{7cm}|p{4cm}|p{1.8cm}|}
-\caption{Segundo Filtrado} \\
+\caption{Segundo Filtrado}
+\label{table:filtrado3} \\
 \hline
 \textbf{Herramienta} & \textbf{Estado} & \textbf{Fecha de ejecución} \\
 \hline
@@ -304,7 +305,6 @@ Storygenie & \textbf{Incluida} & 21/11/2025 \\
 AutoStory: AI-Powered Ticket Creation for Jira & \textbf{Filtrada}, no se pudo probar & 4/12/2025 \\
 \hline
 \end{longtable}
-\label{table:filtrados3}
 \end{center}
 
 En la Tabla \ref{tab:incluidasfiltrado2} se listan todas las herramientas incluidas junto a los requisitos que cumplen.
@@ -387,8 +387,8 @@ En la Tabla \ref{table:ranking-puntos} se presentan los valores definidos para c
 \hline
 \endfirsthead
 
-\hline
 \caption{Peso de cada funcionalidad según importancia - Continuación} \\
+\hline
 \textbf{Funcionalidad} & \textbf{Importancia} & \textbf{Justificación} & \textbf{Valor} \\
 \hline
 \endhead
