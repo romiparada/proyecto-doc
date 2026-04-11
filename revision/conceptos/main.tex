@@ -156,4 +156,7 @@ El diseño del \textit{prompt} influye directamente en la calidad de la respuest
   \item \textit{Zero-shot prompting}: el modelo recibe únicamente la descripción de la tarea, sin ejemplos previos, y se apoya en el conocimiento adquirido durante su entrenamiento.
   \item \textit{Few-shot prompting}: se proporciona al modelo un conjunto reducido de ejemplos de entrada y salida esperada antes de la tarea objetivo, lo que guía su comportamiento sin modificar sus parámetros~\cite{brown2020language}.
   \item \textit{Chain-of-thought prompting}: el \textit{prompt} incluye pasos de razonamiento intermedios, incentivando al modelo a generar una cadena de razonamiento explícita antes de producir la respuesta final~\cite{wei2022chainofthought}.
+  \item \textit{Answer engineering}: consiste en diseñar el espacio y formato de la respuesta esperada, especificando plantillas, campos obligatorios o estructuras de salida que el modelo debe seguir~\cite{liu2021prompting}.
 \end{itemize}
+
+En este trabajo se utilizó un enfoque de \textit{zero-shot prompting} combinado con \textit{answer engineering} (ver Secciones~\ref{sec:mejora-entrada} y~\ref{sec:diseno-prompts}).
