@@ -1,6 +1,6 @@
 \section{Análisis de herramientas}
 
-El objetivo del análisis fue entender qué tan disponibles, capaces y maduras son las herramientas que encontramos para la generación automática de historias de usuario. Para ello, registramos tres tipos de información: datos generales de cada herramienta, sus capacidades declaradas y observadas, y la calidad de las historias de usuario generadas.
+A partir de las herramientas que superaron el proceso de filtrado descrito en la sección anterior, se diseñó una metodología de análisis para evaluar en profundidad sus capacidades. El objetivo del análisis fue entender qué tan disponibles, capaces y maduras son las herramientas que encontramos para la generación automática de historias de usuario. Para ello, registramos tres tipos de información: datos generales de cada herramienta, sus capacidades declaradas y observadas, y la calidad de las historias de usuario generadas.
 
 En la información general se documentó el nombre de la herramienta, la disponibilidad del código fuente, el tipo de licencia, la familia de modelos empleada y el año de lanzamiento. También se distinguió si la herramienta es una solución independiente o si funciona como complemento dentro de un sistema de gestión de proyectos.
 
@@ -32,7 +32,7 @@ En resumen, para cada herramienta se respondieron de manera sistemática las sig
     \item Salida estructurada: si ofrece resultados en formatos estructurados (por ejemplo, tablas, formatos serializables o estructuras que faciliten la integración con sistemas de gestión de proyectos).
 \end{itemize}
 
-\subsection{Diseño de prompts para la evaluación}
+\subsection{Diseño de prompts para la evaluación}\label{sec:diseno-prompts}
 Dado que las herramientas evaluadas presentan distintos grados de automatización e interacción (algunas generan historias automáticamente y otras requieren instrucciones explícitas), se definieron dos niveles de prompting para controlar el costo de interacción y, a la vez, medir el desempeño bajo guía metodológica.
 
 \paragraph{Prompt simple (línea base).}
@@ -64,7 +64,7 @@ Completo (metodológico) & Evaluar desempeño bajo guía alineada con INVEST y s
 \end{table}
 
 
-\subsubsection{Generación automática de historias de usuario}
+\subsection{Generación automática de historias de usuario}
 
 La capacidad de generar automáticamente una historia por cada requerimiento es el núcleo del problema. Para este criterio se midió la cobertura (qué proporción de los requisitos relevantes se transforman en historias) y la granularidad (si las historias son accionables o si se agrupan en épicas demasiado generales). Se registró el Total de Historias Generadas como indicador de productividad por ejecución y la cobertura por requerimiento. 
 
@@ -82,7 +82,7 @@ La identificación de contradicciones, ambigüedades o duplicidades es especialm
 
 \subsection{Validación de la calidad de las historias de usuario según el modelo INVEST}
 
-Se utilizó el modelo INVEST por su amplia difusión en metodologías ágiles y porque resume propiedades clave de una buena historia: independiente, negociable, valiosa, estimable, small y testable~\cite{wake_invest,cohn_user_stories_applied}. Estas propiedades sirvieron como marco para analizar en qué medida las historias generadas por cada herramienta son efectivamente utilizables en un contexto de desarrollo iterativo. La dimensión testable se conectó directamente con la presencia y calidad de criterios de aceptación, mientras que valiosa y estimable se vincularon con la claridad del beneficio para un actor y la acotación del alcance de la historia.
+Se utilizó el modelo INVEST por su amplia difusión en metodologías ágiles y porque resume propiedades clave de una buena historia: independiente, negociable, valiosa, estimable, pequeña (\textit{small}) y verificable (\textit{testable})~\cite{wake_invest,cohn_user_stories_applied}. Estas propiedades sirvieron como marco para analizar en qué medida las historias generadas por cada herramienta son efectivamente utilizables en un contexto de desarrollo iterativo. La dimensión testable se conectó directamente con la presencia y calidad de criterios de aceptación, mientras que valiosa y estimable se vincularon con la claridad del beneficio para un actor y la acotación del alcance de la historia.
 
 \subsection{Trazabilidad entre requisitos e historias de usuario}
 
