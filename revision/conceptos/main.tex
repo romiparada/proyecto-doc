@@ -7,7 +7,7 @@ Las metodologías ágiles describen un enfoque general para el desarrollo de pro
 \label{sec:historias_de_usuario}
 Una historia de usuario es un escenario: una descripción de un uso (potencial) real de un sistema. Se plantea desde la perspectiva del cliente o del usuario y representa el entendimiento compartido de un equipo sobre lo que el sistema debería hacer.~\cite{wake_definition}
 
-Una de las plantillas utilizadas para la redacción de historias de usuario es: Como un [tipo de usuario], quiero [hacer algo] para que [se cumpla algún objetivo]~\cite{cohn_user_stories_applied}. Está compuesta entonces por un rol, una acción y un contexto o propósito.
+Una de las plantillas utilizadas para la redacción de historias de usuario es: Como un [tipo de usuario], quiero [hacer algo] para que [se cumpla algún objetivo]~\cite{cohn_user_stories_applied}. Está compuesta entonces por un rol, una acción y un contexto o propósito o fin.
 \subsection{Criterios de aceptación}
 \label{sec:criterios_aceptacion}
 
@@ -141,7 +141,14 @@ La similitud semántica es una medida que cuantifica el grado en que dos textos 
 
 Para utilizar los modelos en tareas de predicción, la entrada original $x$ se modifica mediante una plantilla para convertirla en una cadena de texto (\textit{prompt}) $x'$ que contiene espacios sin completar. Luego, se utiliza el modelo de lenguaje para completar la información faltante de forma probabilística.~\cite{liu2021prompting}
 
-En términos simples, un \textit{prompt} es un texto en lenguaje natural que indica de alguna manera la tarea que la inteligencia artificial debe realizar.
+En términos simples, un \textit{prompt} es un texto en lenguaje natural que indica de alguna manera la tarea que debe realizar la inteligencia artificial. Por ejemplo, en la Figura~\ref{fig:ejemplo_prompt} se muestra un \textit{prompt} que indica traducir al inglés la frase ``Hola Mundo''.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figs/ejemploprompt.png}
+    \caption{Ejemplo de \textit{prompt} para la traducción al inglés}
+    \label{fig:ejemplo_prompt}
+\end{figure}
 
 El diseño del \textit{prompt} influye directamente en la calidad de la respuesta generada. Entre las principales técnicas de ingeniería de \textit{prompts} se encuentran~\cite{liu2021prompting}:
 
@@ -150,12 +157,3 @@ El diseño del \textit{prompt} influye directamente en la calidad de la respuest
   \item \textit{Few-shot prompting}: se proporciona al modelo un conjunto reducido de ejemplos de entrada y salida esperada antes de la tarea objetivo, lo que guía su comportamiento sin modificar sus parámetros~\cite{brown2020language}.
   \item \textit{Chain-of-thought prompting}: el \textit{prompt} incluye pasos de razonamiento intermedios, incentivando al modelo a generar una cadena de razonamiento explícita antes de producir la respuesta final~\cite{wei2022chainofthought}.
 \end{itemize}
-
-Por ejemplo, en la Figura~\ref{fig:ejemplo_prompt} se muestra un \textit{prompt} que indica traducir al inglés la frase ``Hola Mundo''.
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figs/ejemploprompt.png}
-    \caption{Ejemplo de \textit{prompt} para la traducción al inglés}
-    \label{fig:ejemplo_prompt}
-\end{figure}
