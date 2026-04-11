@@ -10,11 +10,11 @@ Como primer paso nos enfocamos en realizar una prueba piloto con la herramienta 
 
 \input{central/prueba piloto - ClickUp}
 
-\section{Mejora de la entrada}
+\section{Mejora de la entrada}\label{sec:mejora-entrada}
 
 Dada la prueba piloto de ClickUp, se decidió agregar detalles faltantes al documento de requerimientos, agregando detalles como los Actores participantes del sistema.
 
-Además, se revisó el prompt, agregando instrucciones como la plantilla de las historias de usuario, instruyendo el contenido que debe incluir para su verificación, evitando ambigüedades.
+Además, se revisó el prompt, agregando instrucciones como la plantilla de las historias de usuario, instruyendo el contenido que debe incluir para su verificación, evitando ambigüedades. Se mantuvo un enfoque de \textit{zero-shot prompting} (ver Sección~\ref{sec:prompt}), sin incluir ejemplos previos de historias de usuario, y se aplicó \textit{answer engineering} al definir una plantilla de salida y campos obligatorios que estructuran la respuesta del modelo.
 
 \begin{verbatim}
 Genera historias de usuario a partir del siguiente documento de requisitos.
